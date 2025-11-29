@@ -308,6 +308,8 @@ image cgerinsex:
 image cygnusRoom:
         "bgs/cygnusBedroom.webp"
 
+image car:
+        "bgs/carAtNight.webp"
 transform flip:
         xzoom -1.0
         yalign 1.0
@@ -354,3 +356,8 @@ transform ijsberen:
         ease 3.0 xalign 0.0
         xzoom 1.0
         repeat
+
+transform spriteShake:
+    linear 0.05 xoffset -5 #move left 20 pixel in 0.2 seconds
+    linear 0.05 xoffset +5 #move right 20 pixel in 0.2 seconds
+    repeat 5 #repeat the above 5 times

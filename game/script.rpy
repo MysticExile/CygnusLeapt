@@ -154,45 +154,71 @@
     with dissolve
     "You knock gently, before entering their bedroom."
     show e neutral at right
-    show blankiedthefuckup at left
+    show blankiedthefuckup at Transform(xalign=0.0,yalign=10.0)
     with ease
     "Stepping past old ballet programs, folded laundry still in a basket, and the occasional knitted stuffed animal, you sit on the edge of their bed."
     show e neutral at easein(2.0,1.0,0.4)
     "You gently shake the tangle of blankets hiding your partner. Their usual heat clings to them. The beak and few feathers that emerge glisten with sweat."
     "Usually when it’s like this they’ve been in bed for almost a full 24 hours." 
     "You keep your voice gentle, and low. They don’t like being seen like this." 
-    E "Hey, how’re you feeling?"
+    E@speaking "Hey, how’re you feeling?"
+    show blankiedthefuckup at spriteShake
     C "Hmm? Erin?"
     "They croak, their voice raspy." 
-    E "Hey. Have you eaten today? I made you some dinner." 
+    show e arms_heart shirt_heart with dissolve
+    E@speaking"Hey. Have you eaten today? I made you some dinner." 
     "You gently run your hand along their form. The blanket is a little damp." 
-    E "Why don’t you get up and come take your meds, okay?" 
+    E@speaking"Why don’t you get up and come take your meds, okay?" 
     "They seem to wake up a little more, too much inflection and care in their words, as their voice strains." 
+    show blankiedthefuckup at spriteShake
     C "Yeah, yeah okay. Thank you, lover. Lemme just get up." 
     "You sit with them, as minutes pass."
+    show e pensive arms_shy shirt_shy with dissolve
     E "Cygnus."
+    show blankiedthefuckup at Transform(yalign=1.0)
+    with ease
     "They rise this time, still clinging to a blanket."
+    show blankiedthefuckup at spriteShake
     C "Oof, right. Thank you, I’m moving now." 
+    show e neutral arms_heart shirt_heart at easein(1.5,0.4,0.67)
+    show blankiedthefuckup at easein(2.5,0.0,0.34)
     "You spend the rest of the evening taking care of them, helping where you can with chores, making sure they take their meds, which they at least keep up on even when they’re in an episode like this." 
+    show blankiedthefuckup at spriteShake
     "It’s hard to see them this way. You wish you could do more, spend more time with them. Wish that they could live with someone who cared more."
-    "The two of you let out a sigh in almost perfect synchronization." 
-    E "um…"
+    "The two of you let out a sigh in almost perfect synchronization."
+    E@speaking "um…"
     C "...heh"
+    show e happy with dissolve
     C "Pffft, hahaha!"
     "Their laugh rings out, a little more light shining into the room with you."
     C "I adore you so, Erin." 
+    scene black with Dissolve(2.0)
+    centered "{cps=5}2 Years ago..."
     # BLACK SCREEN WITH BIG WHITE FONT THAT SAYS ONE YEAR AGO
+    scene car with Dissolve(2.0)
     # BG: Car
     "The rain falls hard against the windows of the cab. It’s late enough that all the buses have stopped running, and you had to call a rideshare to get home."
     "You check your phone, something which is something you have been putting off doing all day for reasons you can’t name, but have a slow dread about." 
     "You have only 3 messages. A good sign. All three are from Cygnus. The first is around 9 in the morning."
     # Phone Graphic: "Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/)"
     # "Shit."
+    show phone
+    show screen phone("{size=*0.8}Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/){/size}\n{size=*0.5}Received 9:03AM{/size}")
+    with easeinbottom
     "The next reads from 5pm."
+    hide screen phone
+    show screen phone("{size=*0.8}Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/){/size}\n{size=*0.5}Received 9:03AM{/size}\n\n{size=*0.8}Final night of the show, can’t wait to see you there! It’s just the Nutcracker, admittedly not my most exciting show, but I think you’ll enjoy the costumes. Your comp tickets are at the register. I put you on the side closest to me ;>{/size}\n{size=*0.5}Received 4:58PM{/size}")
+    with dissolve
     # Phone Graphic: "Final night of the show, can’t wait to see you there! It’s just the Nutcracker, admittedly not my most exciting show, but I think you’ll enjoy the costumes. Your comp tickets are at the register. I put you on the side closest to me ;>" 
-    # "You quickly scroll to the final one, an hour ago, a little after midnight."
+    "You quickly scroll to the final one, an hour ago, a little after midnight."
+    hide screen phone
+    show screen phone("{size=*0.8}Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/){/size}\n{size=*0.5}Received 9:03AM{/size}\n\n{size=*0.8}Final night of the show, can’t wait to see you there! It’s just the Nutcracker, admittedly not my most exciting show, but I think you’ll enjoy the costumes. Your comp tickets are at the register. I put you on the side closest to me ;>{/size}\n{size=*0.5}Received 4:58PM{/size}\n\n{size=*0.8}Text me that you’re home safe. Goodnight.{/size}\n{size=*0.5}Received 12:20AM")
+    with dissolve
     # Phone Graphic: "Text me that you’re home safe. Goodnight." 
     "Shiiiiiit."
+    hide phone
+    hide screen phone
+    with easeoutbottom
     "Another performance completely missed. You don’t actually remember the last one you went to. Cygnus won’t get mad at you, they never do, but you know it hurts them."
     "Of course now is when your mind decides to remind you of all the conversations you’ve had with them about being forgotten."
     "How they dread not being remembered, and feel like they only take up space in someone’s mind when they’re directly in front of them." 
