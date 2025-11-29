@@ -170,9 +170,9 @@ layeredimage k:
                         "sprites/kosta/tail normal.webp"
 
         group body:
-                attribute arm_resting default:
+                attribute arms_resting default:
                         "sprites/kosta/arms normal.webp"
-                attribute arm_crossed:
+                attribute arms_crossed:
                         "sprites/kosta/arms crossed.webp"
 
         group face auto:
@@ -188,18 +188,20 @@ layeredimage k:
                         "sprites/kosta/head speaking.webp"
                 attribute concern:
                         "sprites/kosta/head concern.webp"
+                attribute sad:
+                        "sprites/kosta/head sad.webp"
 
-        group clothes variant crossed:
-                attribute shirt_crossed:
-                        "sprites/kosta/shirt arms crossed.webp"
-                attribute pants_crossed:
-                        "sprites/kosta/pants arms crossed.webp"
-
-        group clothes variant normal:
+        group shirt:
                 attribute shirt_normal default:
                         "sprites/kosta/shirt arms normal.webp"
+                attribute shirt_crossed:
+                        "sprites/kosta/shirt arms crossed.webp"
+
+        group pants:
                 attribute pants_normal default:
                         "sprites/kosta/pants arms normal.webp"
+                attribute pants_crossed:
+                        "sprites/kosta/pants arms crossed.webp"
 
 layeredimage e:
         zoom 0.30
@@ -310,6 +312,13 @@ image cygnusRoom:
 
 image car:
         "bgs/carAtNight.webp"
+
+image ErinApartment_Night:
+        "bgs/ErinApartment_Night.webp"
+
+image erinBedroom:
+        "bgs/ErinBedroomSex_Twilight.webp"
+
 transform flip:
         xzoom -1.0
         yalign 1.0
@@ -332,6 +341,38 @@ transform middleFlip:
         yalign 1.0
         xalign 0.5
         xzoom -1.0
+
+transform pos1:
+        yalign 1.0
+        xalign 0.1
+
+transform pos2:
+        yalign 1.0
+        xalign 0.2
+
+transform pos3:
+        yalign 1.0
+        xalign 0.3
+
+transform pos4:
+        yalign 1.0
+        xalign 0.4
+
+transform pos6:
+        yalign 1.0
+        xalign 0.6
+
+transform pos7:
+        yalign 1.0
+        xalign 0.7
+
+transform pos8:
+        yalign 1.0
+        xalign 0.8
+
+transform pos9:
+        yalign 1.0
+        xalign 0.9
 
 transform easein(duration, startPos, endPos):
         xalign startPos

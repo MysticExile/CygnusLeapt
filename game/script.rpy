@@ -225,35 +225,74 @@
     "Anniversaries mean a lot to them, because it reminds them the time they spent is real."
     "And finally how even though this ballet isn’t that impressive, since you’ve missed the last few, it would mean the world to them if you could catch at least one of the performances." 
     "You realize you haven’t been to a single one since you’ve gotten this job."
-    # BG: Erin’s Apartment
+    scene ErinApartment_Night with Dissolve(1.5)
     "When you finally stumble into your apartment, it feels like more of a tomb than a home."
+    scene greenroom with Dissolve(2.0)
     # BG: Green Room
-    C "And this is Kosta, sometimes we audition for the same part, but mostly we end up on stage together, since he’s one of the few guys here that has the core strength necessary to lift me." 
+    show c laugh arm_laugh jacket_laugh at pos1
+    show e happy arms_shy shirt_shy at pos3
+    show k arms_crossed shirt_crossed pants_crossed at pos8,flip
+    with dissolve
+    C "And this is Kosta, sometimes we audition for the same part, but mostly we end up on stage together, since he’s one of the few guys here that has the core strength necessary to lift me."
+    show c happy arm_neutral jacket_neutral
+    show k laugh
+    with dissolve
     K "Hey, nice to meet you! I’ve heard a lot about you from Cygnus" 
+    show k neutral
     "You can only begin to wonder how many times Cygnus must have told him that you’re unreliable and downright cold."
-    K "I’m really glad that Cy has someone like you looking out for them."
+    K@speaking"I’m really glad that Cy has someone like you looking out for them."
     "You’re almost blinded by the raw aura of affection this man has for the world around him."
     "You somehow feel if the building were to collapse right now, he would find a way to shield both you, and Cygnus, from the debris. And somehow he'd come out no worse for wear."
-    "He also has a vague accent, though you wouldn’t be able to place where from." 
-    E "Oh, thank you. It’s nice to meet you too." 
+    "He also has a vague accent, though you wouldn’t be able to place where from."
+    show e arms_crossed shirt_crossed with dissolve
+    E@speaking"Oh, thank you. It’s nice to meet you too."
+    show c laugh arm_laugh jacket_laugh with dissolve
     C "Kosta is also the reigning Culpable Cog: Endeavor champ here at the ballet, so hopefully they can give you a run for your money where I am so sorely lacking."
+    show c happy arm_neutral jacket_neutral
+    show k neutral arms_resting shirt_normal pants_normal
+    show e surprise arms_heart shirt_heart
+    with dissolve
     E "Oh! Who do you main?"
-    K "Anthrax. Can’t resist the gender neutral." 
-    E "Damn… a counter…" 
-    K "Oh?" 
-    E "We’ll have to play sometime. I main June!"
+    K@laugh "Anthrax. Can’t resist the gender neutral." 
+    E@speaking"Damn… a counter…" 
+    K@speaking"Oh?"
+    E@laugh"We’ll have to play sometime. I main June!"
+    show e happy
+    show c laugh arm_laugh jacket_laugh
+    show k concern at pos9 with ease
     "Kosta pulls back in mock horror" 
-    K "Cygnus I didn’t know you were dating a feral beast!" 
-    E "I didn’t know you were friends with a chaser." 
+    K@speaking"Cygnus I didn’t know you were dating a feral beast!" 
+    show k laugh with dissolve
+    show e happy at pos4,flip with ease
+    E@speaking "I didn’t know you were friends with a chaser."
     "Wait."
+    show e pensive arms_crossed shirt_crossed with dissolve
     "That was definitely too far."
+    show c happy arm_neutral jacket_neutral
+    show e surprise at unflip
+    with dissolve
+    show k smug arms_crossed shirt_crossed pants_crossed at pos7 with ease
     K "Uh, yeah? Have you seen their thighs?"
+    show e happy with dissolve
     "He turns and gestures at Cygnus."
+    show k smug arms_crossed shirt_crossed pants_crossed at spriteShake
     K "Have you seen their thighs?"
+    show e laugh
+    show k laugh
+    show c surprise arm_hand jacket_hand
+    with hpunch
+    show c happy arm_neutral jacket_neutral with Dissolve(2.0)
     "You both burst out laughing. Cygnus seems mildly confused, but is always ready to bask in the glow of a compliment." 
+    scene bar with Dissolve(2.0)
+    show c laugh arm_laugh jacket_laugh at pos7,flip
+    show k laugh arms_resting shirt_normal pants_normal at pos4
+    show e laugh arms_heart shirt_heart at pos1
+    with hpunch
     "The night continues, to the bar, and then back to his apartment for a first to 50."
+    scene black with Dissolve(2.0)
     "The partial hangover the next day is worth it."
     # BG: Erin’s Apartment
+    scene erinBedroom with Dissolve(2.0)
     "Cygnus drapes over the only piece of furniture in your room like a tapestry."
     "Moments like these remind you how easy it was to fall in love with them."
     C "Maybe… if you let me move in with you, I’d finally get to meet some of your friends. I mean you’ve met my sibling, I want to meet your family!"
