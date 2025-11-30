@@ -89,26 +89,26 @@
                         "sprites/cygnus/cygnus normal/head surprise.webp"
 
         group leotard:
-                attribute leotard default:
+                attribute leotard:
                         "sprites/cygnus/cygnus normal/leotard normal.webp"
                 attribute leotard_pitflash:
                         "sprites/cygnus/cygnus normal/leotard pitflash.webp"
 
         group jacket_left:
-                attribute jacket_left default:
+                attribute jacket_left:
                         "sprites/cygnus/cygnus normal/jacket leftside.webp"
 
         group jacket:
                 attribute jacket_laugh:
                         "sprites/cygnus/cygnus normal/jacket arm pitflash laugh.webp"
-                attribute jacket_neutral default:
+                attribute jacket_neutral:
                         "sprites/cygnus/cygnus normal/jacket arm pitflash neutral happy.webp"
                 attribute jacket_smug:
                         "sprites/cygnus/cygnus normal/jacket arm pitflash smug.webp"
                 attribute jacket_speaking:
                         "sprites/cygnus/cygnus normal/jacket arm pitflash speaking.webp"
                 attribute jacket_surprise:
-                        "sprites/cygnus/cygnus normal/jacket arm pitflash neutral.webp"
+                        "sprites/cygnus/cygnus normal/jacket arm pitflash surprise.webp"
                 attribute jacket_resting:
                         "sprites/cygnus/cygnus normal/jacket arm resting.webp"
                 attribute jacket_hand:
@@ -117,7 +117,7 @@
         group tail:
                 attribute tail_noclothes:
                         "sprites/cygnus/cygnus normal/tail no clothes.webp"
-                attribute tail_clothes default:
+                attribute tail_clothes:
                         "sprites/cygnus/cygnus normal/tail under jacket.webp"
 
         group pants:
@@ -128,6 +128,12 @@ layeredimage c_sad:
         zoom 0.3
         always:
                 "sprites/cygnus/cygnus sad/base.webp"
+
+        group tail:
+                attribute tail_clothes:
+                        "sprites/cygnus/cygnus sad/tail under jacket.webp"
+                attribute tail:
+                        "sprites/cygnus/cygnus sad/tail no clothes.webp"
         
         group face:
                 attribute depressed default:
@@ -136,7 +142,7 @@ layeredimage c_sad:
                         "sprites/cygnus/cygnus sad/head sad.webp"
 
         group leotard:
-                attribute jacket default:
+                attribute leotard:
                         "sprites/cygnus/cygnus sad/leotard.webp"
 
         group pants:
@@ -144,14 +150,8 @@ layeredimage c_sad:
                         "sprites/cygnus/cygnus sad/pants.webp"
 
         group jacket:
-                attribute jacket default:
+                attribute jacket:
                         "sprites/cygnus/cygnus sad/jacket.webp"
-
-        group tail:
-                attribute tail default:
-                        "sprites/cygnus/cygnus sad/tail under jacket.webp"
-                attribute tail default:
-                        "sprites/cygnus/cygnus sad/tail no clothes.webp"
 
 image blankiedthefuckup:
         zoom 0.3

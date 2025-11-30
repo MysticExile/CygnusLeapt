@@ -104,7 +104,7 @@
     show boss at left with easeinleft
     B "So that’s everything! If your keycard isn’t activated by the end of the day go see Martin down in Security! Anything else you need!?"
     "The owl looks down at you, unblinking. He leans just far enough forward to be verging on uncomfortable." 
-    E@speaking"Uh, no, thank you."
+    E@annoyed"Uh, no, thank you."
     show boss at jump
     B "Great! This is a tough job, and it takes lots of dedication, but I think you’ll find it very rewarding!" 
     B "Our cases are pretty straight forward, mostly dementia and Alzheimer's victims, sorting out those with clouded last days, straightforward stuff! Still! If you find your cases weighing on you, pop right on up to our counselor offices on floor 3 and I’m sure they’ll fix you up in a jiffy!" 
@@ -122,9 +122,9 @@
     "Every Friday your department goes out to party, or drink, or hang out. You think mandatory attendance is implied, but you don’t ask."
     show faggylizzard at easein(0.5,0.3,0.3),infiniteJump(0.2) with dissolve
     show boss at easein(0.5,0.0,0.0),infiniteJump(0.15) with dissolve
-    show c arm_resting happy at easein(1.0,-1.0,0.67)
+    show c arm_resting happy jacket_left tail_clothes leotard at easein(1.0,-1.0,0.67)
     "You invite Cygnus, and they join you a couple of times, but bars have never really been their scene."
-    show c laugh jacket_laugh jacket_left arm_laugh at flip with dissolve
+    show c laugh jacket_laugh jacket_left arm_laugh leotard_pitflash at flip with dissolve
     hide faggylizzard
     hide boss
     hide c
@@ -136,6 +136,7 @@
     show faggylizzard at right,flip,infiniteJump(0.5)
     with easeinright
     "It’s alright, though. You enjoy yourself with your coworkers, even if there remains a layer of separation between your life and theirs."
+    show e laugh with dissolve
     "It’s an easy place to float, apart from each other, but still within earshot. You laugh at their jokes, and listen about their lives. You orbit the outside of the dynamic, but there’s still space for you."
     scene black with Dissolve(2.0)
     "It makes up for the long hours, and how you’re too tired to do much of anything after work."
@@ -182,15 +183,22 @@
     C "Oof, right. Thank you, I’m moving now." 
     show e neutral arms_heart shirt_heart at easein(1.5,0.4,0.67)
     show blankiedthefuckup at easein(2.5,0.0,0.34)
-    "You spend the rest of the evening taking care of them, helping where you can with chores, making sure they take their meds, which they at least keep up on even when they’re in an episode like this." 
-    show blankiedthefuckup at spriteShake
+    "You spend the rest of the evening taking care of them, helping where you can with chores, making sure they take their meds, which they at least keep up on even when they’re in an episode like this."
+    hide blankiedthefuckup with easeoutleft
+    show c_sad at easein(2.5,-1.0,0.34)
     "It’s hard to see them this way. You wish you could do more, spend more time with them. Wish that they could live with someone who cared more."
+    show e pensive at spriteShake
+    show c_sad tail at spriteShake
     "The two of you let out a sigh in almost perfect synchronization."
     E@speaking "um…"
+    hide c_sad
+    show c happy arm_resting tail_noclothes at pos3 with dissolve
     C "...heh"
+    show c laugh arm_hand with hpunch
     show e happy with dissolve
     C "Pffft, hahaha!"
     "Their laugh rings out, a little more light shining into the room with you."
+    show c happy with dissolve
     C "I adore you so, Erin." 
     scene black with Dissolve(2.0)
     centered "{cps=5}2 Years ago..."
@@ -229,7 +237,7 @@
     "When you finally stumble into your apartment, it feels like more of a tomb than a home."
     scene greenroom with Dissolve(2.0)
     # BG: Green Room
-    show c laugh arm_laugh jacket_laugh at pos1
+    show c laugh arm_laugh jacket_laugh leotard_pitflash jacket_left tail_clothes at pos1
     show e happy arms_shy shirt_shy at pos3
     show k arms_crossed shirt_crossed pants_crossed at pos8,flip
     with dissolve
@@ -265,6 +273,9 @@
     show k laugh with dissolve
     show e happy at pos4,flip with ease
     E@speaking "I didn’t know you were friends with a chaser."
+    show e surprise
+    show c surprise jacket_surprise arm_surprise
+    show k speaking
     "Wait."
     show e pensive arms_crossed shirt_crossed with dissolve
     "That was definitely too far."
@@ -284,7 +295,7 @@
     show c happy arm_neutral jacket_neutral with Dissolve(2.0)
     "You both burst out laughing. Cygnus seems mildly confused, but is always ready to bask in the glow of a compliment." 
     scene bar with Dissolve(2.0)
-    show c laugh arm_laugh jacket_laugh at pos7,flip
+    show c laugh arm_laugh jacket_laugh jacket_left tail_clothes leotard_pitflash at pos7,flip
     show k laugh arms_resting shirt_normal pants_normal at pos4
     show e laugh arms_heart shirt_heart at pos1
     with hpunch
@@ -292,15 +303,22 @@
     scene black with Dissolve(2.0)
     "The partial hangover the next day is worth it."
     # BG: Erin’s Apartment
-    scene erinBedroom with Dissolve(2.0)
+    scene erinBedroom
+    show c neutral arm_hand jacket_hand jacket_left leotard at pos7,flip
+    show e neutral arms_heart shirt_heart at pos3
+    with Dissolve(2.0)
     "Cygnus drapes over the only piece of furniture in your room like a tapestry."
     "Moments like these remind you how easy it was to fall in love with them."
-    C "Maybe… if you let me move in with you, I’d finally get to meet some of your friends. I mean you’ve met my sibling, I want to meet your family!"
+    C@speaking"Maybe… if you let me move in with you, I’d finally get to meet some of your friends. I mean you’ve met my sibling, I want to meet your family!"
+    show e pensive with dissolve
     "You both pause."
-    C "Okay I don’t want to meet your family—"
-    E "No—"
-    C "Yeah no."
+    C@speaking"Okay I don’t want to meet your family—"
+    E@speaking"No—"
+    show e happy
+    C@speaking"Yeah no."
+    show c happy
     C "But I want to meet the other important people in your life!"
+    show e pensive
     E "Of course. It’s just hard for me I guess. I don’t know." 
     E "I’ve had bad experiences before, introduce someone and then break up shortly after." 
     E "Same with moving in, it feels like a really scary step. What if we don’t work out?"
