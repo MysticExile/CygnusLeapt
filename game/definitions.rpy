@@ -53,6 +53,15 @@
             image = "g"
     )
 
+    define R = Character(
+            "Roommate",
+            color = "#ffffff",
+            what_prefix = "\"",
+            what_suffix = "\"",
+            cb_character = "R",
+            image = "r"
+    )
+
     layeredimage c:
         zoom 0.30
         always:
@@ -121,7 +130,7 @@
                         "sprites/cygnus/cygnus normal/tail under jacket.webp"
 
         group pants:
-                attribute pants default:
+                attribute pants:
                         "sprites/cygnus/cygnus normal/pants.webp"
 
 layeredimage c_sad:
@@ -146,12 +155,39 @@ layeredimage c_sad:
                         "sprites/cygnus/cygnus sad/leotard.webp"
 
         group pants:
-                attribute pants default:
+                attribute pants:
                         "sprites/cygnus/cygnus sad/pants.webp"
 
         group jacket:
                 attribute jacket:
                         "sprites/cygnus/cygnus sad/jacket.webp"
+
+layeredimage c_angry:
+        zoom 0.3
+        always:
+                "sprites/cygnus/cygnus angry/base.webp"
+
+        group tail:
+                attribute tail_clothes:
+                        "sprites/cygnus/cygnus angry/tail under jacket.webp"
+                attribute tail:
+                        "sprites/cygnus/cygnus angry/tail no clothes.webp"
+        
+        group face:
+                attribute mad default:
+                        "sprites/cygnus/cygnus angry/head.webp"
+
+        group leotard:
+                attribute leotard:
+                        "sprites/cygnus/cygnus angry/leotard.webp"
+
+        group pants:
+                attribute pants default:
+                        "sprites/cygnus/cygnus angry/pants.webp"
+
+        group jacket:
+                attribute jacket:
+                        "sprites/cygnus/cygnus angry/jacket.webp"
 
 image blankiedthefuckup:
         zoom 0.3
@@ -192,13 +228,13 @@ layeredimage k:
                         "sprites/kosta/head sad.webp"
 
         group shirt:
-                attribute shirt_normal default:
+                attribute shirt_normal:
                         "sprites/kosta/shirt arms normal.webp"
                 attribute shirt_crossed:
                         "sprites/kosta/shirt arms crossed.webp"
 
         group pants:
-                attribute pants_normal default:
+                attribute pants_normal:
                         "sprites/kosta/pants arms normal.webp"
                 attribute pants_crossed:
                         "sprites/kosta/pants arms crossed.webp"
@@ -258,7 +294,7 @@ layeredimage e:
                 attribute pendant:
                         "sprites/erin/pendant.webp"
                 attribute pendant_heart:
-                        "sprites/erin/pedant arms heart.webp"
+                        "sprites/erin/pendant arms heart.webp"
 
 
 image apartmentD:
@@ -272,6 +308,34 @@ image apartmentN:
 
 image cityAtNight:
         "bgs/cityAtNight.webp"
+
+image dismounted:
+        zoom 0.67
+        "cgs/cg cygnus dismounting.webp"
+
+image drawer1:
+        zoom 0.67
+        "cgs/cg drawer 1.webp"
+
+image drawer2:
+        zoom 0.67
+        "cgs/cg drawer 2.webp"
+
+image drawer3:
+        zoom 0.67
+        "cgs/cg drawer 3.webp"
+
+image drawer4:
+        zoom 0.67
+        "cgs/cg drawer 4.webp"
+
+image drawer5:
+        zoom 0.67
+        "cgs/cg drawer 5.webp"
+
+image drawer6:
+        zoom 0.67
+        "cgs/cg drawer 6.webp"
 
 image notification:
         "phone/Notification.png"
@@ -291,6 +355,18 @@ image cygrinkiss3:
         zoom 0.67
         "cgs/cg cygnus erin silhouette kiss 3.webp"
 
+image karaoke1:
+        zoom 0.67
+        "cgs/cg karaoke1.webp"
+
+image karaoke2:
+        zoom 0.67
+        "cgs/cg karaoke2.webp"
+
+image whatthefuck:
+        zoom 0.3
+        "sprites/erin/filter fucking breaks (no layers).webp"
+
 image boss:
         zoom 0.30
         "sprites/extras/erin coworker.webp"
@@ -303,18 +379,37 @@ image security:
         zoom 0.3
         "sprites/extras/security bear.webp"
 
+image balletStage:
+        "bgs/balletStage.webp"
+
 image cgerinsex:
         zoom 0.67
         "cgs/cg cygnus erin sex.webp"
 
+image danceKerche1:
+        "cgs/Cygnus Dances CG1.png"
+
+image sibling:
+        zoom 0.3
+        "sprites/extras/cygnus sibling.webp"
+
+image danceKerche2:
+        "cgs/Cygnus Dances CG2.png"
+
 image cygnusRoom:
         "bgs/cygnusBedroom.webp"
+
+image cygnusRoomNight:
+        "bgs/cygnusBedroomNight.webp"
 
 image car:
         "bgs/carAtNight.webp"
 
 image ErinApartment_Night:
         "bgs/ErinApartment_Night.webp"
+
+image ErinApartment_Day:
+        "bgs/ErinApartment_Day.webp"
 
 image erinBedroom:
         "bgs/ErinBedroomSex_Twilight.webp"
@@ -402,3 +497,31 @@ transform spriteShake:
     linear 0.05 xoffset -5 #move left 20 pixel in 0.2 seconds
     linear 0.05 xoffset +5 #move right 20 pixel in 0.2 seconds
     repeat 5 #repeat the above 5 times
+
+transform standUp:
+        yalign 5.0
+        linear 0.34  yalign 1.0
+
+transform swirl:
+        zoom 4.0
+        anchor (0.5,0.5)
+        rotate 0
+        linear 25.0 rotate 360
+        repeat
+
+transform ghost(opacity=1.0):
+        linear 0.5 alpha opacity
+
+transform ijsveren:
+        xalign 0.1
+        yalign 5.0
+        ease 3.0 xalign 0.15
+        xzoom -1.0
+        ease 3.0 xalign 0.1
+        xzoom 1.0
+        repeat
+transform bend:
+        yalign 1.115
+        yanchor 1.0
+        xanchor 0.8
+        linear 0.5 rotate -2

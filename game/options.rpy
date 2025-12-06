@@ -38,6 +38,7 @@ define gui.about = _p("""
 ## or semicolons.
 
 define build.name = "CygnusLeapt"
+define config.main_menu_music = "audio/music/Komiku - A Tale is never forgotten - 14 The main reason we cry so much.mp3"
 
 
 ## Sounds and music ############################################################
