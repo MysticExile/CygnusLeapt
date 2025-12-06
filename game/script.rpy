@@ -1,8 +1,9 @@
 ﻿label start:
-
+    show screen icon_cycler()
     scene apartmentN with dissolve
     stop music
     play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 1.0
+    $ unlock_unspokenWord(1)
     "The drawer shakes slightly as you tug on it, but ultimately doesn’t give. It’s locked."
     "It’s still locked."
     "It’s cheap, an easy-build model from a discount store. It came with the apartment and you just never got rid of it. It wouldn’t take much force to just snap the lock."
@@ -218,7 +219,7 @@
     # BG: Car
     "The rain falls hard against the windows of the cab. It’s late enough that all the buses have stopped running, and you had to call a rideshare to get home."
     play music "audio/music/Komiku - It's time for adventure vol 2 - 04 Time.mp3" fadein 1.0
-    "You check your phone, something which is something you have been putting off doing all day for reasons you can’t name, but have a slow dread about." 
+    "You check your phone, which is something you have been putting off doing all day for reasons you can’t name, but have a slow burning dread about." 
     "You have only 3 messages. A good sign. All three are from Cygnus. The first is around 9 in the morning."
     # Phone Graphic: "Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/)"
     # "Shit."
@@ -543,6 +544,8 @@
     "The weight of Cygnus’ absence suddenly feels unbearable. When was the last time you heard their voice? The last time you saw them laugh?"
     "When was the last time you felt their burning warmth?" 
     "You close that chasm before it can open up all the way, take a shaky breath, and gently rest your hands on the film reel." 
+    $ unlock_unspokenWord(0)
+    $ persistent.unspokenWordsUI = True
     # BG: Swirl [UNLOCK THE SUN UNSPOKEN WORDS!]
     show mailroom at VHS,swirl
     show e surprise arms_heart shirt_heart at VHS,AnimatedAberate
@@ -1133,11 +1136,11 @@
     C "That said, as we both know, the important part of boundaries and choices is the ability to say no." 
     C "So I’m leaving the key with you over here in this drawer—"
     scene drawer1 with dissolve
-    "They walk over to the other dresser in your room, opening one of the top drawers. They set the key down. They’re nervous, but also self satisfied with this scheme." 
+    "They walk over to the other dresser in your room, gesturing at the drawers. They set the key down. They’re nervous, but also self satisfied with this scheme."
     scene drawer2 with dissolve
-    C "And if you want that space back, or need in there for some reason, it’s right here. No harm, no foul." 
+    C "And if you want that space back, or need in there for some reason, it’s right here. No harm, no foul."
     scene drawer3 with dissolve
-    "And just like that they shut the drawer. Where is the key?! You wish the memories would let you open the drawer yourself." 
+    "And just like that they stride off. Where is the key?! You wish the memories would let you open the drawer yourself."
     scene drawer5 with dissolve
     "Days after the news about Cygnus, you had tried to open the drawer. It was locked, and so you sought the key, where they had left it for you."
     scene drawer6 with dissolve

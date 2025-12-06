@@ -1,4 +1,5 @@
 ﻿init:
+# Characters
     define E = Character(
             "Erin",
             color = "#a0aac7",
@@ -61,6 +62,8 @@
             cb_character = "R",
             image = "r"
     )
+
+# Sprites
 
     layeredimage c:
         zoom 0.30
@@ -296,6 +299,8 @@ layeredimage e:
                 attribute pendant_heart:
                         "sprites/erin/pendant arms heart.webp"
 
+# CG's and BG's
+
 
 image apartmentD:
         "bgs/ErinBedroomDrawer_Day.webp"
@@ -413,6 +418,8 @@ image ErinApartment_Day:
 
 image erinBedroom:
         "bgs/ErinBedroomSex_Twilight.webp"
+
+# Transforms
 
 transform flip:
         xzoom -1.0
