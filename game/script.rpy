@@ -213,7 +213,7 @@
     C "I adore you so, Erin." 
     stop music fadeout 1.0
     scene black with Dissolve(2.0)
-    centered "{cps=5}2 Years ago..."
+    centered "{cps=5}1 Years ago..."
     # BLACK SCREEN WITH BIG WHITE FONT THAT SAYS ONE YEAR AGO
     scene car with Dissolve(2.0)
     # BG: Car
@@ -905,7 +905,7 @@
     "And yet all you can feel is… pride? They’re so thrilled to see you up there, shaking your hips and making blowjob sounds whole heartedly." 
     "And, of course, this shouldn’t surprise you, underneath that pride is a very intense horny thirst. They want you, and while you’ve always known this, it’s almost staggering just how much they do." 
     "Even while you’re making a fool of yourself on stage." 
-    stop music
+    stop music fadeout 1.0
     show layer master at WhiteNoise,StillAberate,VHS
     with Dissolve(1.25)
     scene bar
@@ -967,7 +967,7 @@
     K "Wait, what? Noooo please Cygnus you didn’t even get anything on or in you! At least give me a damp washcloth. It's gonna be so hard to get this out of my fur!"
     show k concern at flip with ease
     hide k concern with easeoutleft
-    show whatthefuck at flip,easein(2.0,1.5,1.0)
+    show whatthefuck at flip,easein(2.0,1.5,1.0),VHS,ghost(opacity=0.67)
     "...You’re going to be thinking about this for awhile." 
     scene cygnusRoomNight with Dissolve(2.0)
     show c happy arm_neutral tail_noclothes at left,Transform(yalign=5.0)
@@ -1000,7 +1000,7 @@
     "That they’re doing something wrong. That they’re weighing you down, a cage you force yourself into."
     show k neutral
     show c speaking
-    show e sad at spriteShake
+    show e sad at spriteShake,VHS,ghost(opacity=0.67)
     "They know what they want, but they don’t know how to ask you. They don’t know if they deserve it." 
     "You know they didn’t deserve this." 
     "Before you can truly begin to spiral, time pulls you back to Cygnus’ present." 
@@ -1183,7 +1183,7 @@
     show c at center with ease
     show k neutral arms_crossed pants_crossed tail shirt_crossed at right
     show boss at left
-    show e pensive at unflip
+    show e pensive at unflip,VHS,ghost(opacity=0.67)
     with dissolve
     "They set their phone aside, and join the pre-show cast circle. Like usual, they stand between the dancer portraying Phaethon, and Kosta." 
     play music "audio/music/Komiku_-_02_-_Le_Grand_Village.mp3" fadein 1.0
@@ -1277,16 +1277,17 @@
     with dissolve
     "Cygnus sighs, sitting in the driver’s seat for a few minutes, cooling down. The rapids inside them slowly calm, and they start the car." 
     stop music fadeout 1.0
+    play music "audio/music/Loyalty Freak Music - BLEEPS AND BLOOPS - 04 Making my bleep ready for action -eyes- -muscle-.mp3" fadein 1.0
     "The cd player spins up, and they hesitate, their hand over the volume knob, before turning it up."
     "As they drive home, they sing along with the track. A small bittersweet trickle is replaced by nostalgia and joy. You understand why. This is the album the two of you bonded over after you started dating." 
     show c laugh arm_laugh jacket_laugh at infiniteJump(0.33)
     C "I will ride your waaaaaaake! And find these waaaaaves! They say we can’t but I know that’s not truuuuue!"
     "You’re not sure if those are the lyrics, but you still sing along with them anyway." 
+    stop music 1.0
     scene black
     jump repeat
     label repeat:
         "You breathe in, and then out."
-        play music "audio/music/Loyalty Freak Music - BLEEPS AND BLOOPS - 04 Making my bleep ready for action -eyes- -muscle-.mp3" 
         menu:
             "This is it. Are you ready?"
 
@@ -1305,7 +1306,7 @@ label moveon:
     "Abstract shapes. Last Thoughts censors traumatic events for standard viewing. What matters isn’t the car accident itself, but the feelings Cygnus has."
     "Mercifully, it’s quick. But, for just a second, just a frame, you catch one standout thought."
     C "Dammit, Erin’s key." 
-    scene black
+    scene black with Dissolve(2.0)
     pause
     scene apartmentN
     show c happy tail_clothes pants arm_resting leotard jacket_left at left
@@ -1418,6 +1419,8 @@ label moveon:
     E "And in the sun rises, and sunsets. In the stained glass, the glittering dew, the powerful, warm and loving rays." 
     show e funeral arms_heart shirt_heart pendant_heart with dissolve
     "You clutch the pendant around your neck. You can almost feel Cygnus' heartbeat against yours."
-    E "In those moments, I will know that Cygnus and their love is still here with me." 
+    E "In those moments, I will know that Cygnus and their love is still here with me."
+    scene black with Dissolve(3.0)
+    pause
     # End, return to the main menu, with the new version. 
     return
