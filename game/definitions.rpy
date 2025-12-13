@@ -532,3 +532,26 @@ transform bend:
         yanchor 1.0
         xanchor 0.8
         linear 0.5 rotate -2
+
+image filmbg:
+        Movie(play="/images/unspokenwords/filmbg.webm",loop=True)
+
+image unspokenWordsButton:
+        xalign 0.01
+        yalign 0.5
+        "gui/unspokenWords.webp"
+
+transform cygnusdancing:
+        zoom 0.28
+        xalign 0.5
+        anchor(0.5,0.0)
+        alpha 0.33
+        ConditionSwitch(
+                "persistent.randpose == 1", "images/cgs/cygnuspose 1.webp",
+                "persistent.randpose == 2", "images/cgs/cygnuspose 2.webp",
+                "persistent.randpose == 3", "images/cgs/cygnuspose 3.webp",
+                "persistent.randpose == 4", "images/cgs/cygnuspose 4.webp",
+        )  # shrink to edge, fade out
+        ease 3 xzoom -1.0  # flip to back side
+        ease 3 xzoom 1.0
+        repeat

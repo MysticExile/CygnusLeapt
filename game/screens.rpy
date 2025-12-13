@@ -109,10 +109,9 @@ screen say(who, what):
 
         text what id "what"
         if (persistent.unspokenWordsUI == True):
-            textbutton "UnspokenWords" action [
-                Function(pause_music),
-                Show("unspokenWords")
-            ]
+                button:
+                    action [Function(pause_music),ShowMenu("unspokenWords")]
+                    add dissolve_hover("gui/unspokenWords_idle.webp","gui/unspokenWords.webp") at AnimatedAberate
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -259,6 +258,7 @@ screen quick_menu():
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Hide") action HideInterface()
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -305,6 +305,12 @@ screen navigation():
         if main_menu:
 
             textbutton _("Start") action Start()
+
+            if (persistent.unspokenWordsUI == True):
+                textbutton "Unspoken Words" action [
+                    Function(pause_music),
+                    ShowMenu("unspokenWords")
+                ]
 
         else:
 

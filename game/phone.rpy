@@ -1,7 +1,7 @@
 ﻿screen phone(text):
         imagebutton idle "images/phone/background.webp"
         #imagebutton idle "images/phone/Phone.webp"
-        frame at openMessage:
+        frame:
                 xsize 402
                 ysize 702
                 background Solid('#fff')
@@ -9,7 +9,7 @@
                 vbox:
                         spacing 3
                         text "[text]" color "#000"
-                        align (0.0,1.0)
+                        align (0.0,0.0)
 
 transform openMessage:
         yalign 1.0

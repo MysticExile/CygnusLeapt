@@ -584,6 +584,7 @@
     show blankiedthefuckup at pos1,flip,Transform(yalign=5.0)
     with dissolve
     "You’re still a little jealous of their ability to simply sleep, and not toss and turn and ruminate like you do."
+    $ unlock_unspokenWord(1)
     stop music fadeout 1.0
     show e pensive at pos7,VHS,ghost(opacity=0.67),flip with ease
     show layer master at WhiteNoise,StillAberate,VHS
@@ -604,6 +605,7 @@
     show e surprise at spriteShake,VHS,ghost(opacity=0.67),flip with dissolve
     show e pensive at VHS,ghost(opacity=0.67),flip
     "What catches you off guard is the scoff they give as they stare at the screen."
+    $ unlock_unspokenWord(2)
     hide blankiedthefuckup
     show c neutral arm_resting tail_noclothes at pos1,Transform(yalign=5.0)
     with dissolve
@@ -648,7 +650,8 @@
     "Cygnus sighs, lifting their legs into Kosta’s lap, and tilting their head back." 
     stop music fadeout 1.0
     show c speaking arm_speaking jacket_speaking
-    C "It’s hard. I miss them, I hear his voice in all his favorite songs. I miss all these little things, the check ins, the way his lips pull up his fangs when he laughs. The way he leans forward and smiles when he tells me he loves me." 
+    C "It’s hard. I miss them, I hear his voice in all his favorite songs. I miss all these little things, the check ins, the way his lips pull up his fangs when he laughs. The way he leans forward and smiles when he tells me he loves me."
+    $ unlock_unspokenWord(3) 
     C "But the hardest part is how, I don’t know, big my emotions feel."
     hide c
     show c_sad jacket leotard pants tail_clothes at easein(2.5,0.5,0.55)
@@ -662,9 +665,11 @@
     show c_sad sad at spriteShake
     show e sad
     "Waves pour out of Cygnus. Love and longing, exhaustion and fear. It’s hard for you to withstand."
+    $ unlock_unspokenWord(4)
     show e neutral at left,VHS,ghost(opacity=0.67) with ease
     "You steel yourself, and swallow your urge to run. They wanted you to see them, you can’t back down from this." 
     C "I’m tired. Always holding myself back is exhausting, and I feel it’s only a matter of time before everyone else is washed away by it too."
+    $ unlock_unspokenWord(5)
     show k sad arms_resting pants_normal shirt_normal tail_sad with dissolve
     "Kosta sets down his controller, gently rubbing Cygnus’ leg with one hand."
     show k at easein(2.5,1.0,0.95)
@@ -721,7 +726,8 @@
     with dissolve
     show e pensive at easein(0.5,0.0,-0.05),VHS,ghost(opacity=0.67)
     "The frustration soaks through Cygnus. Today the universe hates them, and they’re ready to bite back. Their feathers arch in a way you don’t see often, but still almost makes you flinch." 
-    C "Am I doing the steps wrong, Mr. Emilie?" 
+    C "Am I doing the steps wrong, Mr. Emilie?"
+    $ unlock_unspokenWord(6)
     show faggylizzard at jump
     D "Uff da, you may as well be! Where is the emotion? You are not just a dancer, but an actor as well!"
     show faggylizzard at jump
@@ -750,6 +756,7 @@
     show e pensive at pos1,VHS,ghost(opacity=0.67) with ease
     with dissolve
     "Cygnus breathes out, and with it flows a cold feeling. Sorrow, and resignation. You can feel them trying not to catastrophize."
+    $ unlock_unspokenWord(4)
     show c_sad at spriteShake
     "Suddenly it clicks, and you realize that this is the same day you told Cygnus you needed the space in your relationship." 
     show e sad at flip,VHS,ghost(opacity=0.67) with dissolve
@@ -771,6 +778,7 @@
     show c at spriteShake
     show e neutral arms_crossed shirt_crossed pants
     "Something stirs in Cygnus, though you can’t tell what."
+    $ unlock_unspokenWord(7)
     stop music fadeout 1.0
     "They breathe in, and out."
     show layer master at WhiteNoise,StillAberate,VHS
@@ -807,6 +815,7 @@
     with dissolve
     "Cygnus and Kosta finish cleaning up for the night, putting away makeup and costumes, wiping down the counters."
     K@speaking"Okay Cygnus, I’ve spent enough time around Erin that he’s taught me how to pick up your vibes by osmosis." 
+    $ unlock_unspokenWord(8)
     "You have?"
     show c happy leotard arm_hand tail_noclothes pants at pos4
     C "Now there’s two people who can do that? This is getting out of hand." 
@@ -816,6 +825,7 @@
     show c_sad leotard pants tail_clothes at pos4
     with Dissolve(1.25)
     C "I’m just gonna miss you a lot Kosta."
+    $ unlock_unspokenWord(9)
     show c_sad at spriteShake
     "Kosta waits patiently for them to meet his eyes."
     show k laugh at pos6 with ease
@@ -991,6 +1001,7 @@
     show k neutral with dissolve
     C "I love them so much, and we’ve been friends for such a long time, I don’t think there’s a future without us in each other’s lives." 
     C "But I don’t know what we’re going to look like soon."
+    $ unlock_unspokenWord(10)
     "Cygnus unfolds to Kosta, what you’ve done to them." 
     show c speaking
     "But also the ways they love you, the way you expand the world around them."
@@ -1002,6 +1013,7 @@
     show c speaking
     show e sad at spriteShake,VHS,ghost(opacity=0.67)
     "They know what they want, but they don’t know how to ask you. They don’t know if they deserve it." 
+    $ unlock_unspokenWord(11)
     "You know they didn’t deserve this." 
     "Before you can truly begin to spiral, time pulls you back to Cygnus’ present." 
     stop music fadeout 1.0
@@ -1036,6 +1048,7 @@
     with dissolve
     play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 1.0
     "Friday morning and Cygnus is surprised that you are the one messaging them first."
+    $ unlock_unspokenWord(12)
     show c neutral arm_neutral jacket_neutral with dissolve
     "This is the last time you ever see Cygnus, here in their apartment. It’s almost too painful to bear. Something impossible to work through."
     "The pain is a kind that is unimaginable, you want to just give up. Go home and waste away again. Find some sort of floating pool between giving up completely and living in a world without them." 
@@ -1051,6 +1064,7 @@
     E "You deserve better." 
     show c speaking arm_speaking jacket_speaking
     C "Please stop telling me what I deserve, or what’s best for me." 
+    $ unlock_unspokenWord(13)
     C "I’m patient, I want to be with you Erin. You mean so much to me. You’ve changed me so much as a person, and for the better." 
     C "I wouldn’t be where I’m at, hell, I might not even be alive, if I didn’t have your support." 
     C "You’re my closest friend, not just my lover."
@@ -1062,11 +1076,14 @@
     "And Cygnus, in their strong arms, felt like they were breaking you." 
     show e speaking arms_shy shirt_shy as e2
     E "I almost regret saying yes in the first place. Maybe it was a mistake."
+    $ unlock_unspokenWord(14)
+    $ unlock_unspokenWord(15)
     show e sad arms_shy shirt_shy as e2
     show c speaking arm_speaking jacket_speaking with dissolve
     "You feel something shift in Cygnus. A beginning, the start of a river, a flood, in their heart." 
     show c neutral arm_neutral jacket_neutral with dissolve
     "They watch you, still waters not betraying the deeper current." 
+    $ unlock_unspokenWord(16)
     E "I just. Need more time. And I’m sorry." 
     show c happy with dissolve
     "They smile at you, exhausted, but still, despite everything you’ve done, filled with love." 
@@ -1089,6 +1106,7 @@
     "Your own feelings mix together with Cygnus’. Regret, longing, a blistering need, a melancholy sadness, overwhelming joy, everything you’ve known in them and everything they’ve known in you." 
     show c happy arm_neutral jacket_neutral with dissolve
     C "I love you." 
+    $ unlock_unspokenWord(17)
     "You didn’t hesitate."
     show e happy arms_heart shirt_heart as e2
     E "I love you too." 
@@ -1132,6 +1150,7 @@
     show e happy arms_heart shirt_heart with dissolve
     "You roll your eyes at them affectionately, trying not to let it bother you." 
     "You feel their frustration as well. And a mix of shame, for not just saying what they mean."
+    $ unlock_unspokenWord(18)
     "They hold out the key to the drawer." 
     C "That said, as we both know, the important part of boundaries and choices is the ability to say no." 
     C "So I’m leaving the key with you over here in this drawer—"
@@ -1139,6 +1158,7 @@
     "They walk over to the other dresser in your room, gesturing at the drawers. They set the key down. They’re nervous, but also self satisfied with this scheme."
     scene drawer2 with dissolve
     C "And if you want that space back, or need in there for some reason, it’s right here. No harm, no foul."
+    $ unlock_unspokenWord(19)
     scene drawer3 with dissolve
     "And just like that they stride off. Where is the key?! You wish the memories would let you open the drawer yourself."
     scene drawer5 with dissolve
@@ -1147,6 +1167,7 @@
     "But it wasn’t there."
     "And now here you are, still waiting for them to open it for you instead."
     "Still waiting for them to come home." 
+    $ unlock_unspokenWord(20)
     stop music fadeout 1.0
     show layer master at WhiteNoise,StillAberate,VHS
     with Dissolve(1.75)
@@ -1157,11 +1178,13 @@
     "Back in their present, Cygnus watches you walk down the street from their window until they can no longer see you. They sigh, and with that breath out they begin to dance."
     show c at ijsberen with ease
     "Simple steps, slow, and out of time, as though trying to figure out the choreography for the very first time." 
+    $ unlock_unspokenWord(21)
     "They let their feelings move their body, building confidence. A lilting waltz danced between the two of you. They draw upon a revelation awakening within them and then—"
     show c surprise jacket_surprise arm_surprise at left with ease
     R "Yo Cyg we’re getting pizza, do you want any specific toppings?" 
     show c neutral jacket_left tail_clothes pants leotard_pitflash arm_neutral jacket_neutral
     "They stop, the conclusion slipping between their fingers. Another sigh, one of resignation."
+    $ unlock_unspokenWord(22)
     show layer master at WhiteNoise,StillAberate,VHS
     with Dissolve(1.75)
     scene greenroom
@@ -1174,6 +1197,7 @@
     with easeinbottom
     pause
     show screen phone("thanks again for stopping by Erin. love you! lemme know when you make it home\n{size=*0.5}Sent 03:58PM{/size}\n\ni’ll be perfomin soon so i won’t be around until after\n{size=*0.5}Sent 4:00PM") with easeinbottom
+    $ unlock_unspokenWord(23)
     pause
     hide phone
     hide screen phone
@@ -1195,6 +1219,7 @@
     D "And, this is someone’s last show. Their final performance, the last chance they get to experience the magic we bring them."
     D "You are talented, hard workers. You sweat and cried and in Kosta’s case bled for this show. Give them a beautiful goodbye, and show the full breath of your talent and skill." 
     D "Both they, and you, deserve the best that you can give. Now, go out there and make each other proud! Break!"
+    $ unlock_unspokenWord(24)
     stop music fadeout 1.0
     scene black with dissolve
     # BG: Black Screen
@@ -1283,7 +1308,7 @@
     show c laugh arm_laugh jacket_laugh at infiniteJump(0.33)
     C "I will ride your waaaaaaake! And find these waaaaaves! They say we can’t but I know that’s not truuuuue!"
     "You’re not sure if those are the lyrics, but you still sing along with them anyway." 
-    stop music 1.0
+    stop music fadeout 1.0
     scene black
     jump repeat
     label repeat:
