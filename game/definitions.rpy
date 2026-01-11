@@ -516,6 +516,13 @@ transform swirl:
         linear 25.0 rotate 360
         repeat
 
+transform hovermenu(img):
+        img
+        linear 0.5 matrixcolor ColorizeMatrix("#000","#fff")
+        linear 1.0 matrixcolor ColorizeMatrix("#747474","#fff")
+        linear 0.5 matrixcolor ColorizeMatrix("#000","#fff")
+        repeat
+
 transform ghost(opacity=1.0):
         linear 0.5 alpha opacity
 

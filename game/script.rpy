@@ -1,12 +1,12 @@
 ﻿label start:
     show screen icon_cycler()
-    scene apartmentN with dissolve
+    scene apartmentN with Dissolve(2.0)
     stop music
-    play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 1.0
+    play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 2.0
     $ unlock_unspokenWord(1)
     "The drawer shakes slightly as you tug on it, but ultimately doesn’t give. It’s locked."
-    "It’s still locked."
-    "It’s cheap, an easy-build model from a discount store. It came with the apartment and you just never got rid of it. It wouldn’t take much force to just snap the lock."
+    "It’s {i}still{/i} locked."
+    "It’s cheap, an easy-build model from a discount store. It came with the apartment and you just never got rid of it. It wouldn’t take much force to just snap the lock"
     "Of course, you won’t do that. Like all locks, you just need the key. Breaking it would be admitting you don’t have the key."
     "It would mean admitting—"
     show apartmentNL with dissolve
@@ -29,14 +29,14 @@
     hide notification
     with Dissolve (2.0)
     # BLACK SCREEN WITH BIG WHITE FONT IN THE MIDDLE THAT SAYS "3 YEARS AGO"
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     scene black with Dissolve(2.0)
     centered "{cps=5}3 Years ago..."
     scene cityAtNight with Dissolve(2.0)
-    play music "audio/music/Komiku - The adventure goes on, vol.1 - 05 Sweet night and friends.mp3" fadein 1.0
+    play music "audio/music/Komiku - The adventure goes on, vol.1 - 05 Sweet night and friends.mp3" fadein 2.0
     show cygrinkiss1 with dissolve
     "They sit next to you on the railing, the last one out of the theatre. Even this early in autumn, the chill starts to set in at night."
-    "The heat, the warmth, practically radiates off of them, unaffected by the cold. You find yourself inching closer to them." 
+    "The heat, the {i}warmth{/i}, practically radiates off of them, unaffected by the cold. You find yourself inching closer to them." 
     C "Thanks again for coming, it means a lot to me. Hope I didn’t keep you waiting too long?" 
     "A little closer."
     E "No I’ve just been out here for a few minutes. Thank you for getting me tickets, you’re always an inspiration to watch!"
@@ -56,7 +56,7 @@
     "It would be too conspicuous to wipe your hands off now, you idiot." 
     E "Part of me was hoping it was an infatuation phase I could just, I don’t know, push through? But part of me wants to take advantage of this while it’s here. Like you said, I love how we are now. But I want to find out what we would look like together." 
     "You can’t look at them, your hand tightens around the rail. They don’t say anything, patient as always." 
-    E "I’m sorry that I held back. I know you want me to be open. I do love you, I’m just unsure how to handle it."
+    E "I’m sorry that I held back. I know you want me to be open. I {i}do{/i} love you, I’m just unsure how to handle it."
     E "I want it, but I want you to be with someone better who can more sufficiently support you."
     "You’re a mess."
     E "I’m a mess." 
@@ -86,13 +86,13 @@
     C "It’s the sort of thing that’s not dangerous until you point it out." 
     "As if your body finally catches up to your feelings, a shiver runs down your arm."
     "The bird finally lets your hand go."
-    stop audio fadeout 1.0
+    stop audio fadeout 2.0
     hide cygrinkiss2
     show cygrinkiss1
     with dissolve
     C "Ah, it’s pretty late, and kinda cold. We should head home, and we can talk about this more wh—" 
     "You grab the sleeve of their jacket."
-    play music "audio/music/Komiku_-_02_-_Le_Grand_Village.mp3" fadein 1.0
+    play music "audio/music/Komiku_-_02_-_Le_Grand_Village.mp3" fadein 2.0
     E "Would you… like to come home with me?"
     show black with Dissolve(4.0)
     scene cgerinsex with Dissolve(2.0)
@@ -103,12 +103,12 @@
     E "Cygnus…"
     E "I want your name in my mouth, and I want to struggle to say it between my breaths." 
     "So this is love."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     scene black with Dissolve(2.0)
     centered "{cps=5}2 Years ago..."
     # BLACK SCREEN WITH BIG WHITE FONT THAT SAYS "2 YEARS AGO"
     scene mailroom
-    play music "audio/music/Komiku - It's time for adventure vol 3 - 06 A good bass for gambling.mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 3 - 06 A good bass for gambling.mp3" fadein 2.0
     show e neutral arms_shy shirt_shy pants_shy at rightFlip,easein(2.0,-1.0,0.3)
     show boss at left with easeinleft
     B "So that’s everything! If your keycard isn’t activated by the end of the day go see Martin down in Security! Anything else you need!?"
@@ -149,7 +149,7 @@
     "It’s an easy place to float, apart from each other, but still within earshot. You laugh at their jokes, and listen about their lives. You orbit the outside of the dynamic, but there’s still space for you."
     scene black with Dissolve(2.0)
     "It makes up for the long hours, and how you’re too tired to do much of anything after work."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     scene cygnusRoom
     play music "audio/music/Komiku - A Tale is never forgotten - 01 The main reason we are here.mp3"
     show e pensive at ijsberen
@@ -211,14 +211,14 @@
     "Their laugh rings out, a little more light shining into the room with you."
     show c happy with dissolve
     C "I adore you so, Erin." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     scene black with Dissolve(2.0)
     centered "{cps=5}1 Years ago..."
     # BLACK SCREEN WITH BIG WHITE FONT THAT SAYS ONE YEAR AGO
     scene car with Dissolve(2.0)
     # BG: Car
     "The rain falls hard against the windows of the cab. It’s late enough that all the buses have stopped running, and you had to call a rideshare to get home."
-    play music "audio/music/Komiku - It's time for adventure vol 2 - 04 Time.mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 2 - 04 Time.mp3" fadein 2.0
     "You check your phone, which is something you have been putting off doing all day for reasons you can’t name, but have a slow burning dread about." 
     "You have only 3 messages. A good sign. All three are from Cygnus. The first is around 9 in the morning."
     # Phone Graphic: "Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/)"
@@ -236,7 +236,7 @@
     show screen phone("{size=*0.8}Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/){/size}\n{size=*0.5}Received 9:03AM{/size}\n\n{size=*0.8}Final night of the show, can’t wait to see you there! It’s just the Nutcracker, admittedly not my most exciting show, but I think you’ll enjoy the costumes. Your comp tickets are at the register. I put you on the side closest to me ;>{/size}\n{size=*0.5}Received 4:58PM{/size}\n\n{size=*0.8}Text me that you’re home safe. Goodnight.{/size}\n{size=*0.5}Received 12:20AM")
     with dissolve
     # Phone Graphic: "Text me that you’re home safe. Goodnight." 
-    "Shiiiiiit."
+    "{i}Shiiiiiit.{/i}"
     hide phone
     hide screen phone
     with easeoutbottom
@@ -248,10 +248,10 @@
     "You realize you haven’t been to a single one since you’ve gotten this job."
     scene ErinApartment_Night with Dissolve(1.5)
     "When you finally stumble into your apartment, it feels like more of a tomb than a home."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     scene greenroom with Dissolve(2.0)
     # BG: Green Room
-    play music "audio/music/Komiku - It's time for adventure vol 4 - 04 I got 99 broadswords but this one isn't one (store's theme).mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 4 - 04 I got 99 broadswords but this one isn't one (store's theme).mp3" fadein 2.0
     show c laugh arm_laugh jacket_laugh leotard_pitflash jacket_left tail_clothes pants at pos1
     show e happy arms_shy shirt_shy at pos3
     show k arms_crossed shirt_crossed pants_crossed at pos8,flip
@@ -302,7 +302,7 @@
     show e happy with dissolve
     "He turns and gestures at Cygnus."
     show k smug arms_crossed shirt_crossed pants_crossed at spriteShake
-    K "Have you seen their thighs?"
+    K "Have you seen {i}their{/i} thighs?"
     show e laugh
     show k laugh
     show c surprise arm_hand jacket_hand
@@ -317,10 +317,10 @@
     "The night continues, to the bar, and then back to his apartment for a first to 50."
     scene black with Dissolve(2.0)
     "The partial hangover the next day is worth it."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     # BG: Erin’s Apartment
     scene erinBedroom
-    play music "audio/music/Komiku - It's time for adventure vol 2 - 10 Something to save.mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 2 - 10 Something to save.mp3" fadein 2.0
     show c neutral arm_hand jacket_hand jacket_left leotard pants at pos7,flip
     show e neutral arms_heart shirt_heart at pos3
     with Dissolve(2.0)
@@ -382,7 +382,7 @@
     "You were hoping they’d ask." 
     show e at pos4 with ease
     E "Of course." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     scene black with Dissolve(2.0)
     centered "{cps=5}A few months ago..."
     # BLACK SCREEN WITH BIG FONT THAT READS A FEW MONTHS AGO
@@ -392,9 +392,9 @@
     show c neutral arm_neutral leotard_pitflash tail_clothes jacket_left jacket_neutral pants at pos6,flip,Transform(yalign=5.0)
     with dissolve
     "You sit across from each other. Cygnus absent mindedly stirs their tea. At this point you know they won’t finish it."
-    play music "audio/music/Komiku - A Tale is never forgotten - 01 The main reason we are here.mp3" fadein 1.0
+    play music "audio/music/Komiku - A Tale is never forgotten - 01 The main reason we are here.mp3" fadein 2.0
     show c speaking arm_speaking jacket_speaking
-    C "I want, I need more from you. You’ve been so absent from my life lately. I understand affection is hard for you to show, and that time is one of the ways that you make up for it so…"
+    C "I want, I {i}need{/i} more from you. You’ve been so absent from my life lately. I understand affection is hard for you to show, and that time is one of the ways that you make up for it so…"
     show e pensive
     C "Where are you?"
     C "I get to see you maybe two hours a week total, if I’m lucky."
@@ -454,7 +454,7 @@
     "When they leave for the night, you feel guilty, but relieved." 
     "You still text them, still talk about your day now and then, but you can feel the distance between you two."
     "It’s strange, being the one who initiates now. It used to be Cygnus, always so eager to talk to you, but lately it’s become hard to pry words out of them."
-    stop music fadeout 1.0 
+    stop music fadeout 2.0 
     # BLACK SCREEN THAT WITH BIG FONT THAT READS ONE WEEK AGO (and then in smaller shakier font) MAYBE TWO? MAYBE THREE?
     centered "{cps=5}One week ago...\n\n{size=*0.5}{cps=25}maybe two?{cps=1} {cps=25}maybe three?"
     "It feels unreal at first."
@@ -472,7 +472,7 @@
     # BLACK SCREEN WITH BIG WHITE TEXT THAT READS TONIGHT
     centered "{cps=5}Tonight."
     "You’re a little impressed, strangely, that Cygnus had set this up."
-    play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 1.0
+    play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 2.0
     "Some sort of deadman’s switch in code form, sent out if they don’t push a button to delay it." 
     "You’d be too worried about accidentally forgetting about it and then having to explain some uncomfortable things to the people in your life on the receiving end of it." 
     "The email is mostly formalities. First a list of passwords and posts to make, who to tell what."
@@ -485,7 +485,7 @@
     # Phone Graphic: "I don’t want to leave anything between us after I’m gone. I want to be someone you can carry with you, proud of who I was, and who we were together. You know I always had trouble crying, so you’ll have to cry enough for both of us now. 
     # Phone Graphic: "One last kiss, one last goodbye, that I didn’t get to say. Please, Erin, play me out. If there’s something after this, I promise I’ll be shining down on you from wherever it is. I love you." 
     "You breathe in, and out."
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     hide phone
     hide screen phone
     with Dissolve(2.0)
@@ -501,7 +501,7 @@
     "Maybe it’s just the empty building, everyone having gone home hours ago."
     show security at jump
     G "Yeah feels like you were such a regular, ‘s been quite awhile since I seen ya!"
-    play music "audio/music/Komiku - Tale on the Late - 03 The road we use to travel when we were kids.mp3" fadein 1.0
+    play music "audio/music/Komiku - Tale on the Late - 03 The road we use to travel when we were kids.mp3" fadein 2.0
     show security at pos7,unflip with ease
     show e annoyed
     with dissolve
@@ -528,10 +528,10 @@
     show security at pos8 with ease
     show e annoyed at ijsberen with ease
     "He waits for you to say something else, but you ignore him, organizing your work in front of you, repeatedly, until he finally leaves." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show security at flip,easein(2.5,0.8,2.0)
     "You feel a little bad for being short with him, but you’re weary and tired, and you want to finish this journey while you still have the strength."
-    play music "audio/music/Komiku - It's time for adventure vol 2 - 10 Something to save.mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 2 - 10 Something to save.mp3" fadein 2.0
     hide security
     show e neutral at center with ease
     "You set the Last Thoughts and Unspoken Words down in front of you. The form they take changes depending on whoever the current head of the department is."
@@ -585,12 +585,12 @@
     with dissolve
     "You’re still a little jealous of their ability to simply sleep, and not toss and turn and ruminate like you do."
     $ unlock_unspokenWord(1)
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show e pensive at pos7,VHS,ghost(opacity=0.67),flip with ease
     show layer master at WhiteNoise,StillAberate,VHS
     with dissolve
     scene cygnusRoom
-    play music "audio/music/Komiku - It's time for adventure vol 2 - 11 Remember this shadow.mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 2 - 11 Remember this shadow.mp3" fadein 2.0
     show blankiedthefuckup at pos1,flip,Transform(yalign=5.0)
     show e pensive at pos7,VHS,ghost(opacity=0.67),flip
     with Dissolve(1.75)
@@ -617,14 +617,14 @@
     show e sad at VHS,ghost(opacity=0.67),AnimatedAberate with Dissolve(2.0)
     "You find yourself holding onto your body to ground yourself against these tides, the room spins, and it isn’t until the door slams shut that you remember they only had one thing to say in response."
     "'I’m functioning.'"
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show layer master at WhiteNoise,StillAberate,VHS
     with dissolve
     scene cygnusRoomNight
     show e pensive at Transform(xalign=-0.2,yalign=1.0),VHS,ghost(opacity=0.67)
     show c happy jacket_neutral arm_neutral tail_clothes jacket_left leotard_pitflash pants
     show k neutral arms_crossed shirt_crossed pants_crossed at right,flip
-    play music "audio/music/Komiku - It's time for adventure vol 4 - 04 I got 99 broadswords but this one isn't one (store's theme).mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 4 - 04 I got 99 broadswords but this one isn't one (store's theme).mp3" fadein 2.0
     # BG: Cygnus Apartment, Evening
     "Tuesday, and Kosta is over, while shockingly none of Cygnus’ roommates are home."
     show k at spriteShake
@@ -648,7 +648,7 @@
     K@speaking"So… how’re things going with them? Any updates?" 
     show e neutral
     "Cygnus sighs, lifting their legs into Kosta’s lap, and tilting their head back." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show c speaking arm_speaking jacket_speaking
     C "It’s hard. I miss them, I hear his voice in all his favorite songs. I miss all these little things, the check ins, the way his lips pull up his fangs when he laughs. The way he leans forward and smiles when he tells me he loves me."
     $ unlock_unspokenWord(3) 
@@ -658,7 +658,7 @@
     with dissolve
     K@speaking"I’m not sure I understand." 
     "It starts as a ripple around Cygnus. Exhaustion, followed by what almost feels like a mask being washed away." 
-    play music "audio/music/Komiku_-_13_-_Bleu.mp3" fadein 1.0
+    play music "audio/music/Komiku_-_13_-_Bleu.mp3" fadein 2.0
     show c_sad at spriteShake
     C "I just feel like I’m always holding myself back. Always on this verge of being far too much. Too needy, too affectionate, too sad, and not just for others, but for myself as well."
     show k sad
@@ -686,7 +686,7 @@
     C "Thanks Kosta. Don’t underestimate yourself either, I appreciate you listening so patiently to my bitching." 
     K@laugh"Hey you can always complain, it’s one of life’s greatest luxuries."
     "The three of you sit in silence, soaking in the warmth of Cygnus’ affection."
-    stop music fadeout 1.0 
+    stop music fadeout 2.0 
     show layer master at WhiteNoise,StillAberate,VHS
     with Dissolve(1.5)
     scene balletStage
@@ -709,7 +709,7 @@
     "He turns from Kosta to Cygnus."
     show e happy
     D "Cycnus, great as always. I think you’ve really come into the role. I just have a question for you to keep in mind while you dance." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show layer master at WhiteNoise,StillAberate,VHS
     with dissolve
     show layer master
@@ -718,7 +718,7 @@
     "The same place, but a different time. No costumes yet, but still far into rehearsal, not long ago." 
     show e surprise
     show faggylizzard at jump
-    D "Nononono No! Cygnus, what is this?"
+    D "Nononono {i}No{/i}! Cygnus, what is this?"
     play music "audio/music/Komiku - It's time for adventure vol 2 - 04 Time.mp3"
     hide c
     show c_angry leotard pants tail at Transform(xalign=1.0,yalign=1.0)
@@ -726,7 +726,7 @@
     with dissolve
     show e pensive at easein(0.5,0.0,-0.05),VHS,ghost(opacity=0.67)
     "The frustration soaks through Cygnus. Today the universe hates them, and they’re ready to bite back. Their feathers arch in a way you don’t see often, but still almost makes you flinch." 
-    C "Am I doing the steps wrong, Mr. Emilie?"
+    C "Am I doing the steps {i}wrong{/i}, Mr. Emilie?"
     $ unlock_unspokenWord(6)
     show faggylizzard at jump
     D "Uff da, you may as well be! Where is the emotion? You are not just a dancer, but an actor as well!"
@@ -779,7 +779,7 @@
     show e neutral arms_crossed shirt_crossed pants
     "Something stirs in Cygnus, though you can’t tell what."
     $ unlock_unspokenWord(7)
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     "They breathe in, and out."
     show layer master at WhiteNoise,StillAberate,VHS
     hide faggylizzard
@@ -791,7 +791,7 @@
     show boss at pos4
     with Dissolve(1.5)
     "Thursday and it’s the cast circle after the show. The main announcements have been finished, and now Kosta is getting ready to speak."
-    play music "audio/music/Komiku - The adventure goes on, vol.1 - 13 Friendship is a beautiful link.mp3" fadein 1.0
+    play music "audio/music/Komiku - The adventure goes on, vol.1 - 13 Friendship is a beautiful link.mp3" fadein 2.0
     "Cygnus is nervous, anticipating something."
     K@speaking"Some of you know that recently I got my MLS, which I’ve been slowly chipping away at." 
     K@speaking "Well, I recently got a job offer at the local library, and so even though I’ve only been with you guys for a few years…"
@@ -858,7 +858,7 @@
     C "Yeah I started dancing before I came out. I’d say that I had to fight to get to learn that, but admittedly it was mostly my parents showing up to antagonize the teacher until she let me." 
     show c smug arm_smug
     "They roll their eyes and give a mock huff." 
-    C "They told me learning ballet would make me shorter and yet here I am. Now I’m well over the head of all my troupe members and they won’t let me play the fragile maiden I long so desperately to be in my heart." 
+    C "They told me learning ballet would make me shorter and yet here I am. Now I’m well over the head of all my troupe members and they won’t let me play the {i}fragile maiden{/i} I long so desperately to be in my heart." 
     show k smug with dissolve
     "Kosta picks up quickly." 
     K "Ah yes, I was worried that I would lift you too emphatically and you would just flitter off into the night, like petals on the wind, or perhaps a very well made paper plane." 
@@ -866,7 +866,7 @@
     pause 0.1
     show c laugh arm_laugh with dissolve
     "Cygnus lights up at the mention of the lift, you feel their awe, and a little bit of fluster, blooming out from them." 
-    C "Actually I am a little blown away by how easily you’ve lifted me. The few other guys I’ve convinced to try in the past act like they’re dying." 
+    C "Actually I {i}am{/i} a little blown away by how easily you’ve lifted me. The few other guys I’ve convinced to try in the past act like they’re dying." 
     show c happy arm_neutral with dissolve
     K "I mean this is my job? Lmao? I just do the choreography they pay me to do."
     K "I didn’t put in all this work just to let the rest of my troupe down." 
@@ -913,9 +913,9 @@
     E "Mmm, unf~" 
     "And Cygnus? You’re afraid to feel just how much secondhand embarrassment you must have been subjecting to them to."
     "And yet all you can feel is… pride? They’re so thrilled to see you up there, shaking your hips and making blowjob sounds whole heartedly." 
-    "And, of course, this shouldn’t surprise you, underneath that pride is a very intense horny thirst. They want you, and while you’ve always known this, it’s almost staggering just how much they do." 
+    "And, of course, this shouldn’t surprise you, underneath that pride is a {i}very{/i} intense horny thirst. They want you, and while you’ve always known this, it’s almost staggering just how much they do." 
     "Even while you’re making a fool of yourself on stage." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show layer master at WhiteNoise,StillAberate,VHS
     with Dissolve(1.25)
     scene bar
@@ -924,7 +924,7 @@
     show e laugh arms_heart shirt_heart as e2 at pos1,Transform(yalign=5.0)
     "Later in the evening, you see yourself sitting next to Kosta. You vaguely remember Cygnus having to step away, but now they’re here, lurking in the back, watching you two interact." 
     K "Dude, I’m so glad you got to come out with us!"
-    play music "audio/music/Komiku - The adventure goes on, vol.1 - 13 Friendship is a beautiful link.mp3" fadein 1.0
+    play music "audio/music/Komiku - The adventure goes on, vol.1 - 13 Friendship is a beautiful link.mp3" fadein 2.0
     E "Oh, thank you, it’s been fun."
     K "Cygnus always talks about you, and unsurprisingly they’re right. You’re really easy to get along with."
     show e happy arms_heart shirt_heart
@@ -932,7 +932,7 @@
     K "You do a good job listening, and you’ve got such a good sense of humor." 
     show k neutral with dissolve
     show e happy as e2 with dissolve
-    K@speaking"I mean there’s no way I would have ever sung that lol." 
+    K@speaking"I mean there’s no way {i}I{/i} would have ever sung that lol." 
     K@speaking"But also, you really light up the people around you. We should hang out more!" 
     E "Ah, yeah, I want to. It’s just hard for me to find time with work." 
     show e annoyed arms_crossed shirt_crossed at spriteShake
@@ -961,7 +961,7 @@
     show c smug arm_smug tail_noclothes at flip,pos4,Transform(yalign=5.0)
     show k smug at left,Transform(yalign=5.0)
     with dissolve
-    play music "audio/music/Komiku - It's time for adventure vol 2 - 10 Something to save.mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 2 - 10 Something to save.mp3" fadein 2.0
     "You feel what you would expect from afterglow, but also a lightness from Cygnus, a lessening of pressure, like surfacing from the deep." 
     K "Hey do you want me to finish you off?" 
     "Kosta licks his lips while making a jerking motion with his hand. Cygnus scoffs a little in return." 
@@ -987,7 +987,7 @@
     show k smug
     K "Wow, already giving Erin the update? What are my rankings, what does he think?" 
     show c laugh arm_laugh
-    C "Pfft, just because I keep him abreast of my sordid affairs, I don’t think that means he wants the full play by play." 
+    C "Pfft, just because I keep him abreast of my {i}sordid affairs{/i}, I don’t think that means he wants the full play by play." 
     show k smug at flip,spriteShake
     K "Are you sure? Can you invite him over?"
     show c neutral arm_hand with dissolve
@@ -1016,7 +1016,7 @@
     $ unlock_unspokenWord(11)
     "You know they didn’t deserve this." 
     "Before you can truly begin to spiral, time pulls you back to Cygnus’ present." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show layer master at WhiteNoise,StillAberate,VHS
     with Dissolve(1.5)
     scene greenroom
@@ -1046,7 +1046,7 @@
     show c surprise jacket_left tail_clothes pants leotard_pitflash arm_surprise jacket_surprise at pos4
     show e neutral arms_shy shirt_shy as e2 at pos8,flip
     with dissolve
-    play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 1.0
+    play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 2.0
     "Friday morning and Cygnus is surprised that you are the one messaging them first."
     $ unlock_unspokenWord(12)
     show c neutral arm_neutral jacket_neutral with dissolve
@@ -1110,7 +1110,7 @@
     "You didn’t hesitate."
     show e happy arms_heart shirt_heart as e2
     E "I love you too." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     "Time shifts."
     show layer master at WhiteNoise,StillAberate,VHS
     with Dissolve(1.75)
@@ -1120,7 +1120,7 @@
     with dissolve
     "You know why you’re here. Something you knew you would have to face."
     "Here you are, standing in front of one of the only pieces of furniture you own, Cygnus smugly explaining their plan." 
-    play music "audio/music/Komiku - The adventure goes on, vol.1 - 05 Sweet night and friends.mp3" fadein 1.0
+    play music "audio/music/Komiku - The adventure goes on, vol.1 - 05 Sweet night and friends.mp3" fadein 2.0
     show c speaking arm_speaking jacket_speaking with dissolve
     C "So, we agreed to meet in the middle, right?"
     show c neutral arm_neutral jacket_neutral with dissolve
@@ -1131,7 +1131,7 @@
     show e pensive with dissolve
     E "Right…" 
     show c speaking arm_speaking jacket_speaking with dissolve
-    C "So I am gently exposing you to the idea, by commandeering this drawer. I am moving into this drawer and locking it."
+    C "So I am {i}gently{/i} exposing you to the idea, by commandeering this drawer. I am moving into this drawer and locking it."
     C "And, when you are ready for me to move in with you, I will open it for you, and give you your housewarming gift." 
     show c neutral arm_neutral jacket_neutral with dissolve
     E@speaking"I’m pretty sure a housewarming gift is something you give to the person newly moved in?" 
@@ -1153,7 +1153,7 @@
     $ unlock_unspokenWord(18)
     "They hold out the key to the drawer." 
     C "That said, as we both know, the important part of boundaries and choices is the ability to say no." 
-    C "So I’m leaving the key with you over here in this drawer—"
+    C "So I’m leaving the key with you over here in {i}this{/i} drawer—"
     scene drawer1 with dissolve
     "They walk over to the other dresser in your room, gesturing at the drawers. They set the key down. They’re nervous, but also self satisfied with this scheme."
     scene drawer2 with dissolve
@@ -1168,7 +1168,7 @@
     "And now here you are, still waiting for them to open it for you instead."
     "Still waiting for them to come home." 
     $ unlock_unspokenWord(20)
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     show layer master at WhiteNoise,StillAberate,VHS
     with Dissolve(1.75)
     scene cygnusRoom
@@ -1210,20 +1210,20 @@
     show e pensive at unflip,VHS,ghost(opacity=0.67)
     with dissolve
     "They set their phone aside, and join the pre-show cast circle. Like usual, they stand between the dancer portraying Phaethon, and Kosta." 
-    play music "audio/music/Komiku_-_02_-_Le_Grand_Village.mp3" fadein 1.0
+    play music "audio/music/Komiku_-_02_-_Le_Grand_Village.mp3" fadein 2.0
     D "Alright everyone, it’s the middle of the second week. I know this one doesn’t have the excitement of the opening or closing weeks."
     D "It’s easy to slack off and not give it your all. Cut corners on expressions or entrances in the back. Put enough, but not everything into each performance." 
     "The lizard gestures as wildly as he can while keeping his arms crossed, right over left, in the circle." 
     D "Don’t do that! This is someone’s first show, and someone’s last show." 
     D "This will be the first performance of ballet someone ever sees, and you have the chance to make sure it stays with them forever. To inspire in them a love of the art." 
     D "And, this is someone’s last show. Their final performance, the last chance they get to experience the magic we bring them."
-    D "You are talented, hard workers. You sweat and cried and in Kosta’s case bled for this show. Give them a beautiful goodbye, and show the full breath of your talent and skill." 
+    D "You are talented, hard workers. You sweat and cried and in Kosta’s case {i}bled{/i} for this show. Give them a beautiful goodbye, and show the full breath of your talent and skill." 
     D "Both they, and you, deserve the best that you can give. Now, go out there and make each other proud! Break!"
     $ unlock_unspokenWord(24)
-    stop music fadeout 1.0
+    stop music fadeout 3.0
     scene black with dissolve
     # BG: Black Screen
-    play music "audio/music/The_Falling_Swan.mp3" fadein 1.0
+    play music "audio/music/The_Falling_Swan.mp3" fadein 3.0
     "Cygnus breathes in, and then out." 
     "The torrent swirls inside them. If they could just shift their arms in the right way." 
     "Their heart would open up, the floodgates would release, and everything would flow out. Wash away everything holding them back, holding them down, haunting them." 
@@ -1242,9 +1242,9 @@
     "The final barrier breaks, and all of Cygnus’ feelings are subsumed by this conclusion. King Cycnus couldn’t wash away the burning of Phaethon’s flames."
     "But Cygnus can still embrace the love they have."
     "To mourn? To regret? No. To love someone is wonderful." 
-    "Did King Cycnus regret loving Phaethon? Hardly, he wouldn’t have traded it for anything else." 
+    "Did King Cycnus {i}regret{/i} loving Phaethon? Hardly, he wouldn’t have traded it for anything else." 
     "Cygnus doesn’t regret loving you, and now they dance for your love."
-    "No matter where you stand once this dance is over, Cygnus would never trade away what you had, what you have, for anything else." 
+    "No matter where you stand once this dance is over, Cygnus would never trade away what you had, what you {i}have{/i}, for anything else." 
     "Through their dance now, they share with you how wonderful it is to know someone else in the ways they know you. The ways that you know them." 
     "To have someone see you, and not turn away."
     "Where the sun kisses the ocean, is where you wait for each other." 
@@ -1252,12 +1252,14 @@
     "For you, the very stars shine down." 
     "To be so vulnerable, so honest, with someone else, is terrifying. It takes an act of faith to plunge so deep into the arms of someone else."
     "And here, now, for you, Cygnus leapt." 
-    scene greenroom
+    window hide
+    pause
+    scene greenroom with Dissolve(4.0)
     show c happy tail_noclothes pants arm_neutral at center,flip
     show k neutral arms_crossed pants_crossed shirt_crossed tail at right
     show boss at left
     with dissolve
-    play music "audio/music/The_Falling_Swan_boxver.mp3" fadein 1.0
+    play music "audio/music/The_Falling_Swan_boxver.mp3" fadein 3.0
     C "Oh, haha, thank you very much. You were amazing too." 
     show c at unflip
     hide boss with easeoutleft
@@ -1301,14 +1303,14 @@
     show e happy arms_heart shirt_heart at rightFlip,VHS,ghost(opacity=0.67)
     with dissolve
     "Cygnus sighs, sitting in the driver’s seat for a few minutes, cooling down. The rapids inside them slowly calm, and they start the car." 
-    stop music fadeout 1.0
-    play music "audio/music/Loyalty Freak Music - BLEEPS AND BLOOPS - 04 Making my bleep ready for action -eyes- -muscle-.mp3" fadein 1.0
+    stop music fadeout 2.0
+    play music "audio/music/Loyalty Freak Music - BLEEPS AND BLOOPS - 04 Making my bleep ready for action -eyes- -muscle-.mp3" fadein 2.0
     "The cd player spins up, and they hesitate, their hand over the volume knob, before turning it up."
     "As they drive home, they sing along with the track. A small bittersweet trickle is replaced by nostalgia and joy. You understand why. This is the album the two of you bonded over after you started dating." 
     show c laugh arm_laugh jacket_laugh at infiniteJump(0.33)
     C "I will ride your waaaaaaake! And find these waaaaaves! They say we can’t but I know that’s not truuuuue!"
     "You’re not sure if those are the lyrics, but you still sing along with them anyway." 
-    stop music fadeout 1.0
+    stop music fadeout 2.0
     scene black
     jump repeat
     label repeat:
@@ -1326,19 +1328,19 @@ label moveon:
     scene car
     show layer master at WhiteNoise,VHS,AnimatedAberate
     show e sad arms_heart shirt_heart at rightFlip,VHS,ghost(opacity=0.67)
-    play music "audio/music/Komiku - The adventure goes on, vol.1 - 10 Those dark memories I'm trying to escape myself from.mp3" fadein 1.0
+    play music "audio/music/Komiku - The adventure goes on, vol.1 - 10 Those dark memories I'm trying to escape myself from.mp3" fadein 2.0
     # CG: This was going to be a cg but our poor artist is suffering. You can just slap a million filters on the car BG and deep fry it or something and call it good. The only sprite visible should be Erin during this.
     "Abstract shapes. Last Thoughts censors traumatic events for standard viewing. What matters isn’t the car accident itself, but the feelings Cygnus has."
     "Mercifully, it’s quick. But, for just a second, just a frame, you catch one standout thought."
     C "Dammit, Erin’s key." 
-    scene black with Dissolve(2.0)
+    scene black with Dissolve(4.0)
     pause
     scene apartmentN
     show c happy tail_clothes pants arm_resting leotard jacket_left at left
     show e sad arms_crossed shirt_crossed at rightFlip,VHS,ghost(opacity=0.67)
     with Dissolve(2.0)
     "One last shift, and you’re back in your apartment." 
-    "Cygnus puts the key in the drawer but scoots it too far back, falling in the back between the pieces of cheap furniture and the wall."
+    "Cygnus puts the key on the drawer but when they spin around, their tail knocks it too far back, falling in the back between the piece of cheap furniture and the wall."
     "You can feel the eyeroll coming off Cygnus. Ruining their moment with something stupid. They’re confident they’ll remember to tell you about it… and then they forget." 
     show e happy with dissolve
     "It almost makes you chuckle, it’s very in character for them, ridiculous, but well meaning." 
@@ -1350,28 +1352,28 @@ label moveon:
     scene mailroom
     show e sad arms_crossed shirt_crossed at center
     with Dissolve(1.5)
-    stop music fadeout 1.5
+    stop music fadeout 3.0
     # BG: Archival Room
     "And that’s it. That’s the end of the tape. The end of Cygnus, their final performance, their swan song." 
     hide e with easeoutright
     "The way home is a blur. The security guard has the sense to not bother you on your way out." 
-    scene apartmentN
+    scene apartmentN with Dissolve(2.0)
     # BG: Erin’s Apartment
     show e neutral arms_shy shirt_shy at left
     with Dissolve(2.0)
-    play music "audio/music/Komiku - It's time for adventure vol 2 - 10 Something to save.mp3" fadein 1.0
+    play music "audio/music/Komiku - It's time for adventure vol 2 - 10 Something to save.mp3" fadein 2.0
     "You pull the dresser out of the way, and sure enough, there it is, the key, slightly dusty, on the ground. Right where Cygnus had accidentally dropped it." 
     show e at pos4 with ease
     "Shakily, you put the key into the lock. The drawers aren’t particularly well made, but you can still feel the lock gently click open."
     "You slide the drawer out carefully, though it feels almost weightless."
-    "Inisde, rests a small pendant, threaded around a small silver chain. Within a glass case, a single feather. One of Cygnus’ crest feathers you realize, something they always took rigorous care of." 
+    "Inside rests a small pendant, threaded around a small silver chain. Within a glass case, a single feather. One of Cygnus’ crest feathers you realize, something they always took rigorous care of." 
     show e pensive with dissolve
     "All you can hear is your heartbeat. You crumple onto your bed, clutching the pendant to your chest." 
     "Cygnus…"
     "Welcome home." 
-    stop music fadeout 1.0
-    scene funeral
-    play music "audio/music/Komiku - It's time for adventure vol 4 - 06 Someday I'll like you but before let me rest in my solitude (Lonely character's theme).mp3" fadein 1.0
+    stop music fadeout 2.0
+    scene funeral with Dissolve(4.0)
+    play music "audio/music/Komiku - It's time for adventure vol 4 - 06 Someday I'll like you but before let me rest in my solitude (Lonely character's theme).mp3" fadein 2.0
     show e sad pendant_heart arms_heart shirt_heart at pos1
     with dissolve
     "You’re unsurprised at the sheer number of people that have come out to remember Cygnus, but it still makes you proud." 
@@ -1430,7 +1432,7 @@ label moveon:
     E "We’re doing our best, I think. It’s a strange place to be, I understand. They left specific instructions for me." 
     E "‘I understand these things are for the living, not the departed. I’m already asking so much of you. Do what feels right to you, whether that’s sharing all of our stories, or preserving those treasures between us. As long as they rest in your heart, I’ll be happy.’"
     E "Their kind of  poetic, truly. I really don’t like speaking at these sorts of things. It’s hard to pick the right words, to navigate this strange kind of paradox." 
-    E "You’re supposed to do what would make the departed happy, because it would make those still with us to know that you had. But you can’t make someone who is gone happy, because they’re not here with us." 
+    E "You’re supposed to do what would make the departed happy, because it would make those still with us glad to know that you had. But you can’t make someone who is gone happy, because they’re not here with us." 
     "The words tumble out of your mouth. You feel yourself drift between a kind of divine inspiration, and every single word sounding out of place and stiff." 
     E "Cygnus was my partner."
     "You let that statement rest deep within the seabed of your heart. It feels good to say." 
@@ -1445,7 +1447,7 @@ label moveon:
     show e funeral arms_heart shirt_heart pendant_heart with dissolve
     "You clutch the pendant around your neck. You can almost feel Cygnus' heartbeat against yours."
     E "In those moments, I will know that Cygnus and their love is still here with me."
-    scene black with Dissolve(3.0)
+    scene black with Dissolve(5.0)
     pause
     # End, return to the main menu, with the new version. 
     return

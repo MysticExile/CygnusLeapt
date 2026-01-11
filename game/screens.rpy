@@ -369,12 +369,59 @@ screen main_menu():
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    # frame:
+    #     style "main_menu_frame"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    # use navigation
+    vbox:
+        if main_menu:
+
+            imagebutton:
+                idle "gui/menu/M1_Start.png"
+                hover hovermenu("gui/menu/M1_Start.png")
+                action Start()
+                xpos 80
+                ypos 100
+
+            # if (persistent.unspokenWordsUI == True):
+            #     textbutton "Unspoken Words" action [
+            #         Function(pause_music),
+            #         ShowMenu("unspokenWords")
+            #     ]
+
+        imagebutton:
+            idle "gui/menu/M1_Load.png"
+            hover hovermenu("gui/menu/M1_Load.png")
+            action ShowMenu("load")
+            xpos 120
+            ypos 80
+
+        imagebutton:
+            idle "gui/menu/M1_Settings.png"
+            hover hovermenu("gui/menu/M1_Settings.png")
+            action ShowMenu("preferences")
+            xpos 160
+            ypos 20
+
+        imagebutton:
+            idle "gui/menu/M1_About.png"
+            hover hovermenu("gui/menu/M1_About.png")
+            action ShowMenu("about")
+            xpos 210
+            ypos -20
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            imagebutton:
+                idle "gui/menu/M1_Quit.png"
+                hover hovermenu("gui/menu/M1_Quit.png")
+                action Quit(confirm=not main_menu)
+                xpos 230
+                ypos -40
 
     if gui.show_name:
 
