@@ -70,6 +70,20 @@
         always:
                 "sprites/cygnus/cygnus normal/base.webp"
 
+        group face auto:
+                attribute neutral default:
+                        "sprites/cygnus/cygnus normal/head neutral.webp"
+                attribute happy:
+                        "sprites/cygnus/cygnus normal/head happy.webp"
+                attribute laugh:
+                        "sprites/cygnus/cygnus normal/head laugh.webp"
+                attribute smug:
+                        "sprites/cygnus/cygnus normal/head smug.webp"
+                attribute speaking:
+                        "sprites/cygnus/cygnus normal/head speaking.webp"
+                attribute surprise:
+                        "sprites/cygnus/cygnus normal/head surprise.webp"
+
         group body:
                 attribute arm_neutral default:
                         "sprites/cygnus/cygnus normal/arm pitflash neutral.webp"
@@ -85,20 +99,6 @@
                         "sprites/cygnus/cygnus normal/arm resting.webp"
                 attribute arm_hand:
                         "sprites/cygnus/cygnus normal/arm hand.webp"
-
-        group face auto:
-                attribute neutral default:
-                        "sprites/cygnus/cygnus normal/head neutral.webp"
-                attribute happy:
-                        "sprites/cygnus/cygnus normal/head happy.webp"
-                attribute laugh:
-                        "sprites/cygnus/cygnus normal/head laugh.webp"
-                attribute smug:
-                        "sprites/cygnus/cygnus normal/head smug.webp"
-                attribute speaking:
-                        "sprites/cygnus/cygnus normal/head speaking.webp"
-                attribute surprise:
-                        "sprites/cygnus/cygnus normal/head surprise.webp"
 
         group leotard:
                 attribute leotard:
@@ -348,6 +348,48 @@ image notification:
         xoffset 2
         zoom 1.004
 
+image firstmail:
+        "phone/firstmail.png"
+        yalign 0.518
+        xoffset 2
+        zoom 1.004
+
+image secondmail:
+        "phone/secondmail.png"
+        yalign 0.518
+        xoffset 2
+        zoom 1.004
+
+image whatsapp1:
+        "phone/whatsapp1.png"
+        yalign 0.518
+        xoffset 2
+        zoom 1.004
+        
+image whatsapp2:
+        "phone/whatsapp2.png"
+        yalign 0.518
+        xoffset 2
+        zoom 1.004
+
+image whatsapp3:
+        "phone/whatsapp3.png"
+        yalign 0.518
+        xoffset 2
+        zoom 1.004
+
+image whatsapp4:
+        "phone/cygnusappt1.png"
+        yalign 0.518
+        xoffset 2
+        zoom 1.004
+
+image whatsapp5:
+        "phone/cygnusappt2.png"
+        yalign 0.518
+        xoffset 2
+        zoom 1.004
+
 image cygrinkiss1:
         zoom 0.67
         "cgs/cg cygnus erin silhouette kiss 1.webp"
@@ -418,6 +460,25 @@ image ErinApartment_Day:
 
 image erinBedroom:
         "bgs/ErinBedroomSex_Twilight.webp"
+
+image lastcgbg:
+        zoom 0.666666666666666666666
+        "cgs/cygnus last cg 1.webp"
+
+image lastcg1:
+        zoom 0.666666666666666666666
+        yalign 0.5
+        "cgs/cygnus last cg panel 1.webp"
+
+image lastcg2:
+        zoom 0.666666666666666666666
+        yalign 0.5
+        "cgs/cygnus last cg panel 2.webp"
+
+image lastcg3:
+        zoom 0.666666666666666666666
+        yalign 0.5
+        "cgs/cygnus last cg panel 3.webp"
 
 # Transforms
 
@@ -562,3 +623,38 @@ transform cygnusdancing:
         ease 3 xzoom -1.0  # flip to back side
         ease 3 xzoom 1.0
         repeat
+
+transform blink:
+        alpha 0.0
+        ease 1.0 alpha 1.0
+        ease 1.0 alpha 0.0
+        repeat
+
+image main_menu_completed:
+        "gui/main_menu_completed.webp"
+        xalign 0.5
+
+transform pivotdown:
+        xalign 0.5
+        yalign 0.0
+        ease 2.0 yalign 0.9
+
+transform pivotidle:
+        xalign 0.5
+        yalign 0.0
+
+transform buttonZoom(zoomoffset):
+        zoom zoomoffset
+
+transform alphaGain:
+        alpha 0.0
+        pause 2.0
+        linear 1.0 alpha 1.0
+
+transform alphaZero:
+        alpha 0.0
+
+transform alphaFade:
+        yalign 0.5
+        alpha 1.0
+        linear 1.0 alpha 0.0

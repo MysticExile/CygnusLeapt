@@ -1,7 +1,7 @@
 ﻿init python:
     import pygame
 
-    # Load two icons (make sure they are square and small)
+    # Load icons
     with renpy.loader.load("frame0.png", directory="images") as f:
         icon1 = renpy.display.scale.image_load_unscaled(f, "frame0.png")
     with renpy.loader.load("frame1.png", directory="images") as f:
@@ -22,6 +22,6 @@
             renpy.log("Icon change failed: " + str(e))
         current_icon_index = (current_icon_index + 1) % len(icons)
 
-# Screen that runs a timer every 0.5 seconds
+# Screen that runs the icon changing
 screen icon_cycler():
     timer 0.33 action Function(cycle_icon) repeat True

@@ -18,18 +18,23 @@ define config.name = _("Cygnus Leapt")
 ## Determines if the title given above is shown on the main menu screen. Set
 ## this to False to hide the title.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "1.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+Writer and Creator: {a=https://deepbluefeeling.itch.io/}deepbluefeeling{/a}\n
+Sprites and CG artist: {a=https://bsky.app/profile/idolaterinc.bsky.social}idolater{/a}\n
+Programming, Background and UX: {a=https://bsky.app/profile/mysticexile.bsky.social}MysticExile{/a}\n
+Guest CG Artist: {a=https://city-of-sneps.itch.io/}CityofSneps{/a}\n
+Cygnus' Theme: {a=https://bsky.app/profile/pinknarcissus.bsky.social}PinkNarcissus{/a}
 """)
 
 
@@ -91,7 +96,6 @@ define config.after_load_transition = dissolve
 ## Used when entering the main menu after the game has ended.
 
 define config.end_game_transition = dissolve
-
 
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.

@@ -21,12 +21,12 @@
     "You take a moment to breathe. Your hand shakes as you open the email. What strikes you first is that the formatting is surprisingly formal for them."
     window hide
     #Phone Graphic: "I don’t mean to haunt you, and I certainly don’t mean to hurt you. I love you more than anything, and I want you to know how I feel, just in case something stopped me from saying it before. It’s unfair of me to ask, but I know it’s not always fair between us. I’m trusting you with this, and thanking you in advance. Here is my final will and testament."
-    show screen phone("I don’t mean to haunt you, and I certainly don’t mean to hurt you. I love you more than anything, and I want you to know how I feel, just in case something stopped me from saying it before. It’s unfair of me to ask, but I know it’s not always fair between us. I’m trusting you with this, and thanking you in advance. Here is my final will and testament.") 
+    show firstmail with dissolve
     with dissolve
     pause
-    hide screen phone
     hide phone
     hide notification
+    hide firstmail
     with Dissolve (2.0)
     # BLACK SCREEN WITH BIG WHITE FONT IN THE MIDDLE THAT SAYS "3 YEARS AGO"
     stop music fadeout 2.0
@@ -122,6 +122,7 @@
     hide boss
     with easeoutright
     show e neutral arms_crossed shirt_crossed pants at ijsberen
+    with ease
     "He leaves, and you turn to your work. The Department of Last Thoughts and Unspoken Words. Subdepartment for Hospice and Natural End of Life." 
     "It’s simple work, at least for you. Within someone’s own heart in their final days, you find the directions in their inner worlds and give it back to the people who live on after them." 
     "Processed, archived, and passed on for wherever next it goes in the bureaucratic chain. Your coworkers speak about the emotional cost, but it doesn’t seem to apply to you."
@@ -213,7 +214,7 @@
     C "I adore you so, Erin." 
     stop music fadeout 2.0
     scene black with Dissolve(2.0)
-    centered "{cps=5}1 Years ago..."
+    centered "{cps=5}1 Year ago..."
     # BLACK SCREEN WITH BIG WHITE FONT THAT SAYS ONE YEAR AGO
     scene car with Dissolve(2.0)
     # BG: Car
@@ -224,21 +225,21 @@
     # Phone Graphic: "Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/)"
     # "Shit."
     show phone
-    show screen phone("{size=*0.8}Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/){/size}\n{size=*0.5}Received 9:03AM{/size}")
-    with easeinbottom
+    show whatsapp1
+    with dissolve
     "The next reads from 5pm."
-    hide screen phone
-    show screen phone("{size=*0.8}Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/){/size}\n{size=*0.5}Received 9:03AM{/size}\n\n{size=*0.8}Final night of the show, can’t wait to see you there! It’s just the Nutcracker, admittedly not my most exciting show, but I think you’ll enjoy the costumes. Your comp tickets are at the register. I put you on the side closest to me ;>{/size}\n{size=*0.5}Received 4:58PM{/size}")
+    show whatsapp2
     with dissolve
     # Phone Graphic: "Final night of the show, can’t wait to see you there! It’s just the Nutcracker, admittedly not my most exciting show, but I think you’ll enjoy the costumes. Your comp tickets are at the register. I put you on the side closest to me ;>" 
     "You quickly scroll to the final one, an hour ago, a little after midnight."
-    hide screen phone
-    show screen phone("{size=*0.8}Happy anniversary! I love you so much, I love being your friend, and your partner. I can’t imagine my life without you in it (\^v^/){/size}\n{size=*0.5}Received 9:03AM{/size}\n\n{size=*0.8}Final night of the show, can’t wait to see you there! It’s just the Nutcracker, admittedly not my most exciting show, but I think you’ll enjoy the costumes. Your comp tickets are at the register. I put you on the side closest to me ;>{/size}\n{size=*0.5}Received 4:58PM{/size}\n\n{size=*0.8}Text me that you’re home safe. Goodnight.{/size}\n{size=*0.5}Received 12:20AM")
+    show whatsapp3
     with dissolve
     # Phone Graphic: "Text me that you’re home safe. Goodnight." 
     "{i}Shiiiiiit.{/i}"
     hide phone
-    hide screen phone
+    hide whatsapp1
+    hide whatsapp2
+    hide whatsapp3
     with easeoutbottom
     "Another performance completely missed. You don’t actually remember the last one you went to. Cygnus won’t get mad at you, they never do, but you know it hurts them."
     "Of course now is when your mind decides to remind you of all the conversations you’ve had with them about being forgotten."
@@ -283,7 +284,7 @@
     show e happy
     show c laugh arm_laugh jacket_laugh
     show k concern at pos9 with ease
-    "Kosta pulls back in mock horror" 
+    "Kosta pulls back in mock horror." 
     K@speaking"Cygnus I didn’t know you were dating a feral beast!" 
     show k laugh with dissolve
     show e happy at pos4,flip with ease
@@ -354,7 +355,7 @@
     show e neutral
     hide c_sad
     show c_angry leotard tail at pos2,standUp
-    "They sit up"
+    "They sit up."
     show e surprise with dissolve
     show e pensive at pos6 with ease
     C "You mean you don’t take much time away from work. You’re always exhausted!"
@@ -431,14 +432,17 @@
     show e sad with dissolve
     "That hurts more than you were expecting it to."
     "You don’t want to admit it, but it’s because you don’t know either." 
-    show e pensive arms_crossed shirt_crossed with dissolve
+    hide c_angry
+    show e pensive arms_crossed shirt_crossed 
+    show c_sad leotard tail_clothes jacket pants at pos6,flip,Transform(yalign=5.0)
+    with dissolve
     E@speaking"I think I need space, real space, Cygnus." 
     E@speaking"Distance, to pull myself together. And figure out what I want, and what I’m capable of giving." 
     "This time Cygnus waits for you patiently."
     show e arms_heart shirt_heart with dissolve
     E@speaking"I love you, but I miss when things were easier. Our relationship has become an obligation, and not one I look forward to."
     C "Erin… I understand, but relationships have obligations. Things aren’t always going to be easy, but that doesn’t make them bad. Yes, it’s more work that we both have to put in to maintain it long term."
-    hide c_angry
+    hide c_sad
     show c speaking arm_speaking jacket_speaking jacket_left leotard_pitflash tail_clothes pants at pos6,flip,Transform(yalign=5.0)
     with dissolve
     C "But I want that future with you." 
@@ -479,7 +483,7 @@
     "A similar, but less revealing email has been sent to their sibling, who should help you with any legal issues of inheritance, and what to do with Cygnus’ savings, along with any sort of funeral arrangements." 
     "The scariest part though…" 
     show phone
-    show screen phone("{size=*0.8}I want you to be the one to work my case. No one knows me like you do, and I know what you see will be meant for your eyes.\n\nI don’t want to leave anything between us after I’m gone. I want to be someone you can carry with you, proud of who I was, and who we were together. You know I always had trouble crying, so you’ll have to cry enough for both of us now.\n\nOne last kiss, one last goodbye, that I didn’t get to say. Please, Erin, play me out. If there’s something after this, I promise I’ll be shining down on you from wherever it is. I love you.")
+    show secondmail
     with easeinbottom
     # Phone Graphic: "I want you to be the one to work my case. No one knows me like you do, and I know what you see will be meant for your eyes. 
     # Phone Graphic: "I don’t want to leave anything between us after I’m gone. I want to be someone you can carry with you, proud of who I was, and who we were together. You know I always had trouble crying, so you’ll have to cry enough for both of us now. 
@@ -487,7 +491,7 @@
     "You breathe in, and out."
     stop music fadeout 2.0
     hide phone
-    hide screen phone
+    hide secondmail
     with Dissolve(2.0)
     centered "{size=*2.5}{cps=74}Cygnus Leapt."
     # TITLE CARD
@@ -518,7 +522,7 @@
     with dissolve
     G "I know after my first car’s alternator gave up the ghost, I was too bummed out to even consider any form of transport other than walking." #really, REALLY kill yourself
     "But you’re finding it very hard to be sympathetic right now. Politely excusing yourself from conversations has never been your strongest suit, but this guy seems immune to hints."
-    G "You know they say you never really recover from your first love, but you never recover from your first car—"
+    G "You know they say you never really recover from your first love, but you {b}{i}never{/b}{/i} recover from your first car—"
     show security at pos6,flip with ease
     show e annoyed arms_crossed shirt_crossed at spriteShake
     "You decide to bite the bullet." 
@@ -1193,14 +1197,16 @@
     with dissolve
     "Cygnus texts you."
     show phone
-    show screen phone("thanks again for stopping by Erin. love you! lemme know when you make it home\n{size=*0.5}Sent 01:33PM")
+    show whatsapp4
     with easeinbottom
     pause
-    show screen phone("thanks again for stopping by Erin. love you! lemme know when you make it home\n{size=*0.5}Sent 03:58PM{/size}\n\ni’ll be perfomin soon so i won’t be around until after\n{size=*0.5}Sent 4:00PM") with easeinbottom
+    show whatsapp5
+    with dissolve
     $ unlock_unspokenWord(23)
     pause
     hide phone
-    hide screen phone
+    hide whatsapp4
+    hide whatsapp5
     with easeoutbottom
     # Phone Graphic: "thanks again for stopping by Erin. love you! lemme know when you make it home" 
     # Phone Graphic "i’ll be perfomin soon so i won’t be around until after"
@@ -1442,12 +1448,25 @@ label moveon:
     E "It’s my turn now. I’ll carry on, and love enough for the both of us." 
     E "Cygnus named themself after a constellation. Did you know that we have no way to denote a star that we suspect has faded out, but whose light we can still see?"
     E "Scientifically it doesn’t matter, the stars shine on anyway."
-    E "But to me, Cygnus wasn’t just a star, they were a strong and beautiful sun." 
-    E "And in the sun rises, and sunsets. In the stained glass, the glittering dew, the powerful, warm and loving rays." 
-    show e funeral arms_heart shirt_heart pendant_heart with dissolve
+    scene lastcgbg at Transform(yalign=1.0)
+    with Dissolve(2.0)
+    E "But to me, Cygnus wasn’t just a star, they were a strong and beautiful sun."
+    show lastcg1 at Transform(xalign=0.33,yalign=0.5) with Dissolve(1.0)
+    E "And in the sun rises, and sunsets."
+    show lastcg2 at Transform(xalign=0.66,yalign=0.5) with Dissolve(1.0)
+    E "In the stained glass, the glittering dew."
+    show lastcg3 at Transform(xalign=0.99,yalign=0.39) with Dissolve(1.0)
+    E "In the powerful, warm and loving rays."
     "You clutch the pendant around your neck. You can almost feel Cygnus' heartbeat against yours."
+    hide lastcg1
+    hide lastcg2
+    hide lastcg3
+    with Dissolve(1.0)
+    show lastcgbg:
+        ease 3.0 yalign 0.0
     E "In those moments, I will know that Cygnus and their love is still here with me."
     scene black with Dissolve(5.0)
     pause
+    $ persistent.gameisfinished = True
     # End, return to the main menu, with the new version. 
     return

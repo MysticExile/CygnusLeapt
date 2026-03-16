@@ -107,11 +107,16 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        text what id "what" yalign 0.5
         if (persistent.unspokenWordsUI == True):
+            if(persistent.newwordunlocked == False):
                 button:
-                    action [Function(pause_music),ShowMenu("unspokenWords")]
+                    action [ShowMenu("unspokenWords")]
                     add dissolve_hover("gui/unspokenWords_idle.webp","gui/unspokenWords.webp") at AnimatedAberate
+            elif(persistent.newwordunlocked == True):
+                button:
+                    action [ShowMenu("unspokenWords"),SetVariable("persistent.newwordunlocked", False)]
+                    add dissolve_hover("gui/unspokenWords.webp","gui/unspokenWords.webp") at AnimatedAberate
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -123,6 +128,7 @@ screen say(who, what):
 ## Make the namebox available for styling through the Character object.
 init python:
     config.character_id_prefixes.append('namebox')
+    
 
 style window is default
 style say_label is default
@@ -306,11 +312,11 @@ screen navigation():
 
             textbutton _("Start") action Start()
 
-            if (persistent.unspokenWordsUI == True):
-                textbutton "Unspoken Words" action [
-                    Function(pause_music),
-                    ShowMenu("unspokenWords")
-                ]
+            # if (persistent.unspokenWordsUI == True):
+            #     textbutton "Unspoken Words" action [
+            #         Function(pause_music),
+            #         ShowMenu("unspokenWords")
+            #     ]
 
         else:
 
@@ -361,67 +367,130 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
-screen main_menu():
+default main_menu_locked = True
+default persistent.gameisfinished = False
 
+screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    if (persistent.gameisfinished==True):
+        add "main_menu_completed" at (
+            pivotidle if main_menu_locked else pivotdown
+        )
 
-    ## This empty frame darkens the main menu.
-    # frame:
-    #     style "main_menu_frame"
+        ## This empty frame darkens the main menu.
+        # frame:
+        #     style "main_menu_frame"
 
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
-    # use navigation
-    vbox:
-        if main_menu:
+        ## The use statement includes another screen inside this one. The actual
+        ## contents of the main menu are in the navigation screen.
+        # use navigation
+        vbox:
+            if main_menu:
+                imagebutton:
+                    idle "gui/menu/2_start_hover.webp"
+                    hover "gui/menu/2_start_unhover.webp" 
+                    action Start()
+                    xoffset 600
+                    yoffset 325
+                    at (buttonZoom(0.7),alphaZero if main_menu_locked else alphaGain)
 
             imagebutton:
-                idle "gui/menu/M1_Start.png"
-                hover hovermenu("gui/menu/M1_Start.png")
-                action Start()
-                xpos 80
-                ypos 100
+                idle "gui/menu/2_load_hover.webp"
+                hover "gui/menu/2_load_unhover.webp"
+                action ShowMenu("load")
+                xoffset 650
+                yoffset 325
+                at (buttonZoom(0.7),alphaZero if main_menu_locked else alphaGain)
 
-            # if (persistent.unspokenWordsUI == True):
-            #     textbutton "Unspoken Words" action [
-            #         Function(pause_music),
-            #         ShowMenu("unspokenWords")
-            #     ]
-
-        imagebutton:
-            idle "gui/menu/M1_Load.png"
-            hover hovermenu("gui/menu/M1_Load.png")
-            action ShowMenu("load")
-            xpos 120
-            ypos 80
-
-        imagebutton:
-            idle "gui/menu/M1_Settings.png"
-            hover hovermenu("gui/menu/M1_Settings.png")
-            action ShowMenu("preferences")
-            xpos 160
-            ypos 20
-
-        imagebutton:
-            idle "gui/menu/M1_About.png"
-            hover hovermenu("gui/menu/M1_About.png")
-            action ShowMenu("about")
-            xpos 210
-            ypos -20
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
             imagebutton:
-                idle "gui/menu/M1_Quit.png"
-                hover hovermenu("gui/menu/M1_Quit.png")
-                action Quit(confirm=not main_menu)
-                xpos 230
-                ypos -40
+                idle "gui/menu/2_options_hover.webp"
+                hover "gui/menu/2_options_unhover.webp"
+                action ShowMenu("preferences")
+                xoffset 700
+                yoffset 275
+                at (buttonZoom(0.7),alphaZero if main_menu_locked else alphaGain)
+
+            imagebutton:
+                idle "gui/menu/2_credits_hover.webp"
+                hover "gui/menu/2_credits_unhover.webp"
+                action ShowMenu("about")
+                xoffset 750
+                yoffset 275
+                at (buttonZoom(0.7),alphaZero if main_menu_locked else alphaGain)
+
+            # if renpy.variant("pc"):
+
+            #     ## The quit button is banned on iOS and unnecessary on Android and
+            #     ## Web.
+            #     imagebutton:
+            #         idle "gui/menu/M1_Quit.png"
+            #         hover hovermenu("gui/menu/M1_Quit.png")
+            #         action Quit(confirm=not main_menu)
+            #         xpos 230
+            #         ypos -40
+
+    else:
+        add gui.main_menu_background
+
+        ## This empty frame darkens the main menu.
+        # frame:
+        #     style "main_menu_frame"
+
+        ## The use statement includes another screen inside this one. The actual
+        ## contents of the main menu are in the navigation screen.
+        # use navigation
+        vbox:
+            if main_menu:
+                imagebutton:
+                    idle "gui/menu/1_start_unhover.webp"
+                    hover "gui/menu/1_start_hover.webp" 
+                    action Start()
+                    xoffset 50
+                    yoffset 50
+                    at(buttonZoom(0.6))
+                    #at (buttonZoom(0.7),alphaZero if main_menu_locked else alphaGain)
+
+            imagebutton:
+                idle "gui/menu/1_load_unhover.webp"
+                hover "gui/menu/1_load_hover.webp"
+                action ShowMenu("load")
+                xoffset 90
+                yoffset 35
+                at(buttonZoom(0.6))
+                #at (buttonZoom(0.7),alphaZero if main_menu_locked else alphaGain)
+
+            imagebutton:
+                idle "gui/menu/1_options_unhover.webp"
+                hover "gui/menu/1_options_hover.webp"
+                action ShowMenu("preferences")
+                xoffset 130
+                yoffset 20
+                at(buttonZoom(0.6))
+                #at (buttonZoom(0.7),alphaZero if main_menu_locked else alphaGain)
+
+            imagebutton:
+                idle "gui/menu/1_credits_unhover.webp"
+                hover "gui/menu/1_credits_hover.webp"
+                action ShowMenu("about")
+                xoffset 170
+                yoffset 5
+                at(buttonZoom(0.6))
+                #at (buttonZoom(0.7),alphaZero if main_menu_locked else alphaGain)
+
+            # if renpy.variant("pc"):
+
+            #     ## The quit button is banned on iOS and unnecessary on Android and
+            #     ## Web.
+            #     imagebutton:
+            #         idle "gui/menu/M1_Quit.png"
+            #         hover hovermenu("gui/menu/M1_Quit.png")
+            #         action Quit(confirm=not main_menu)
+            #         xpos 230
+            #         ypos -40
+
+    add "images/bgs/Black.png" at alphaFade
 
     if gui.show_name:
 
@@ -433,6 +502,8 @@ screen main_menu():
 
             text "[config.version]":
                 style "main_menu_version"
+    if main_menu_locked and persistent.gameisfinished:
+        use press_any_key_mainmenu
 
 
 style main_menu_frame is empty
@@ -462,6 +533,29 @@ style main_menu_title:
 
 style main_menu_version:
     properties gui.text_properties("version")
+
+screen press_any_key_mainmenu():
+    modal True
+
+    if renpy.variant("mobile"):
+        text "Tap the screen to continue":
+            xpos 0.5
+            ypos 0.8
+            xanchor 0.5
+            yanchor 0.5
+            at blink
+
+    else:
+        text "Press 'space' to continue":
+            xpos 0.5
+            ypos 0.8
+            xanchor 0.5
+            yanchor 0.5
+            color "#ffffff"
+            at blink
+
+    key "K_SPACE" action SetVariable("main_menu_locked", False)
+    key "mouseup_1" action SetVariable("main_menu_locked", False)
 
 
 ## Game Menu screen ############################################################

@@ -1,13 +1,7 @@
 ﻿python early:
     def unlock_unspokenWord(entry):
         persistent.unspokenWords_unlockable.add(unspokenWords_unlockable[entry])
-
-init python:
-    def pause_music():
-        renpy.music.set_pause(True)
-
-    def resume_music():
-        renpy.music.set_pause(False)
+        persistent.newwordunlocked = True
 
 init:
     define unspokenWords_unlockable = (
@@ -49,6 +43,7 @@ init:
 default persistent.unspokenWords_unlockable = set()
 default persistent.unspokenWordsUI = False
 default persistent.randpose = 1
+default persistent.newwordunlocked = False
 
 transform dissolve_hover(idle_image, hover_image):
     alpha 0.40
@@ -59,8 +54,6 @@ transform dissolve_hover(idle_image, hover_image):
 
 screen unspokenWords():
     $ persistent.randpose = renpy.random.randint(1,4)
-    on "show" action Play("sound", "/audio/music/The_Falling_Swan_boxver.mp3", loop=True, fadein=0.25)
-    on "hide" action Stop("sound")
     #tag menu
     #add "filmbg"
     modal True
@@ -214,14 +207,20 @@ screen unspokenWords():
 
     if main_menu:
         textbutton "Resume" action [
-        Function(resume_music),
+        Stop("sound"),
+        PauseAudio("music",False),
         Hide("unspokenWords")
     ] xalign 0.5 yalign 1.0
     elif not main_menu:
         textbutton "Resume" action [
-        Function(resume_music),
+        Stop("sound"),
+        PauseAudio("music",False),
         Return()
     ] xalign 0.5 yalign 1.0
+
+    on "show" action [Play("sound", "/audio/music/The_Falling_Swan_boxver.mp3", loop=True, fadein=0.25),PauseAudio("music",True)]
+    on "hide" action [Stop("sound"), PauseAudio("music",False)]
+    on "dismiss" action [Stop("sound"), PauseAudio("music",False)]
 
 screen TheSun():
     add "filmbg"
@@ -363,7 +362,7 @@ screen TwoOfCups():
     add "game/images/cgs/cygnuspose 1.webp" at cygnusdancing
     frame:
         xalign 0.5 yalign 0.5 xsize 800 ysize 300 background None
-        text "“I poured all of it into your cup. I left it full and brimming and yet you tell me that what, you thought it was the leftover wine from the party? my cup runneth over":
+        text "“I poured all of it into your cup. I left it full and brimming and yet you tell me that what, you thought it was the leftover wine from the party? my cup runneth over”":
             xalign 0.5 yalign 0.5 text_align 0.5 xmaximum 780
     textbutton "Back" action Hide("TwoOfCups") xalign 0.5
 
