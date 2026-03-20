@@ -1,7 +1,10 @@
 ﻿python early:
     def unlock_unspokenWord(entry):
-        persistent.unspokenWords_unlockable.add(unspokenWords_unlockable[entry])
-        persistent.newwordunlocked = True
+        if unspokenWords_unlockable[entry] in persistent.unspokenWords_unlockable:
+            pass
+        else:
+            persistent.unspokenWords_unlockable.append(unspokenWords_unlockable[entry])
+            persistent.newwordunlocked = True
 
 init:
     define unspokenWords_unlockable = (
@@ -24,12 +27,12 @@ init:
         "Repeat",
         "BalletAstronomy",
         "PoetSoulReleaseMe",
+        "Hope",
         "YourLifeAfter9AM",
         "YourLifeAfter9PM",
         "FourthWallVanity",
         "WhoIsTheMoth",
         "TheSunlight",
-        "Chronic",
         "TheMiddleOfIt",
         "Anagnorisis",
         "Slip",
@@ -40,7 +43,7 @@ init:
         "SisyphusTantalusAndMe"
         )
 
-default persistent.unspokenWords_unlockable = set()
+default persistent.unspokenWords_unlockable = []
 default persistent.unspokenWordsUI = False
 default persistent.randpose = 1
 default persistent.newwordunlocked = False

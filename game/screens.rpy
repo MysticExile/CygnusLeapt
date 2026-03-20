@@ -108,15 +108,22 @@ screen say(who, what):
                 text who id "who"
 
         text what id "what" yalign 0.5
-        if (persistent.unspokenWordsUI == True):
-            if(persistent.newwordunlocked == False):
-                button:
-                    action [ShowMenu("unspokenWords")]
-                    add dissolve_hover("gui/unspokenWords_idle.webp","gui/unspokenWords.webp") at AnimatedAberate
-            elif(persistent.newwordunlocked == True):
-                button:
-                    action [ShowMenu("unspokenWords"),SetVariable("persistent.newwordunlocked", False)]
-                    add dissolve_hover("gui/unspokenWords.webp","gui/unspokenWords.webp") at AnimatedAberate
+        if not main_menu:
+            if persistent.unspokenWords_unlockable != []:
+                if renpy.variant("small"):
+                    button:
+                        action [ShowMenu("unspokenWords")]
+                        add dissolve_hover("gui/unspokenWords.webp","gui/unspokenWords.webp") at AnimatedAberate
+                        if renpy.variant("small"):
+                            yoffset -720
+                elif(persistent.newwordunlocked == False):
+                    button:
+                        action [ShowMenu("unspokenWords")]
+                        add dissolve_hover("gui/unspokenWords_idle.webp","gui/unspokenWords.webp") at AnimatedAberate
+                elif(persistent.newwordunlocked == True):
+                    button:
+                        action [ShowMenu("unspokenWords"),SetVariable("persistent.newwordunlocked", False)]
+                        add dissolve_hover("gui/unspokenWords.webp","gui/unspokenWords.webp") at AnimatedAberate
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -1686,6 +1693,7 @@ screen quick_menu():
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
+            textbutton _("Hide") action HideInterface()
 
 
 style window:

@@ -34,7 +34,17 @@ Writer and Creator: {a=https://deepbluefeeling.itch.io/}deepbluefeeling{/a}\n
 Sprites and CG artist: {a=https://bsky.app/profile/idolaterinc.bsky.social}idolater{/a}\n
 Programming, Background and UX: {a=https://bsky.app/profile/mysticexile.bsky.social}MysticExile{/a}\n
 Guest CG Artist: {a=https://city-of-sneps.itch.io/}CityofSneps{/a}\n
-Cygnus' Theme: {a=https://bsky.app/profile/pinknarcissus.bsky.social}PinkNarcissus{/a}
+Cygnus' Theme: {a=https://bsky.app/profile/pinknarcissus.bsky.social}PinkNarcissus{/a}\n\n
+Other assets credits:\n
+Funeral BG - Image by {a=https://pixabay.com/users/jplenio-7645255/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3112448}Joe{/a} from {a=https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3112448}Pixabay{/a}\n
+Office Photo by {a=https://www.pexels.com/photo/interior-design-of-an-office-5483233/}cottonbro studio{/a}\n
+Bar Image by {a=https://pixabay.com/users/donnasenzafiato-8845382/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3407484}DonnaSenzaFiato{/a}\n
+Unspoken Words BG by {a=https://www.vecteezy.com/members/dancristianpaduret}Paduret Dan Cristian{/a} on {a=https://www.vecteezy.com/free-videos/filmstrip}Vecteezy{/a}\n
+Shaders by {a=https://makevisualnovels.itch.io/}Stella @ MakeVisualNovels{/a}\n
+City at Night BG by {a=https://pixabay.com/users/pixel-sepp-69900/}Christian B.{/a} from {a=https://pixabay.com/photos/waldkirch-of-city-at-night-230711/}Pixabay{/a}\n
+Swan phone BG - {a=https://www.pexels.com/photo/white-swans-on-river-2419158/}Photo{/a} by {a=https://www.pexels.com/@trudie-roden-1054578/}Trudie Roden{/a}\n
+Mail icon - Email icons created by {a=https://www.flaticon.com/free-icons/email}Freepik - Flaticon{/a}\n
+Other icons by {a=https://icon-sets.iconify.design/}Iconify{/a}
 """)
 
 

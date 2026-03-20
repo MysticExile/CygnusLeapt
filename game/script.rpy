@@ -3,7 +3,6 @@
     scene apartmentN with Dissolve(2.0)
     stop music
     play music "audio/music/Komiku - The adventure goes on, vol.1 - 06 Fear of being mistaken.mp3" fadein 2.0
-    $ unlock_unspokenWord(1)
     "The drawer shakes slightly as you tug on it, but ultimately doesn’t give. It’s locked."
     "It’s {i}still{/i} locked."
     "It’s cheap, an easy-build model from a discount store. It came with the apartment and you just never got rid of it. It wouldn’t take much force to just snap the lock"
@@ -760,7 +759,6 @@
     show e pensive at pos1,VHS,ghost(opacity=0.67) with ease
     with dissolve
     "Cygnus breathes out, and with it flows a cold feeling. Sorrow, and resignation. You can feel them trying not to catastrophize."
-    $ unlock_unspokenWord(4)
     show c_sad at spriteShake
     "Suddenly it clicks, and you realize that this is the same day you told Cygnus you needed the space in your relationship." 
     show e sad at flip,VHS,ghost(opacity=0.67) with dissolve
@@ -1260,6 +1258,9 @@
     "And here, now, for you, Cygnus leapt." 
     window hide
     pause
+    stop music fadeout 4.0
+    scene black with Dissolve(4.0)
+    pause
     scene greenroom with Dissolve(4.0)
     show c happy tail_noclothes pants arm_neutral at center,flip
     show k neutral arms_crossed pants_crossed shirt_crossed tail at right
@@ -1452,10 +1453,10 @@ label moveon:
     with Dissolve(2.0)
     E "But to me, Cygnus wasn’t just a star, they were a strong and beautiful sun."
     show lastcg1 at Transform(xalign=0.33,yalign=0.5) with Dissolve(1.0)
-    E "And in the sun rises, and sunsets."
-    show lastcg2 at Transform(xalign=0.66,yalign=0.5) with Dissolve(1.0)
-    E "In the stained glass, the glittering dew."
+    E "And in the sunrises, and sunsets."
     show lastcg3 at Transform(xalign=0.99,yalign=0.39) with Dissolve(1.0)
+    E "In the stained glass, the glittering dew."
+    show lastcg2 at Transform(xalign=0.66,yalign=0.5) with Dissolve(1.0)
     E "In the powerful, warm and loving rays."
     "You clutch the pendant around your neck. You can almost feel Cygnus' heartbeat against yours."
     hide lastcg1
@@ -1465,6 +1466,10 @@ label moveon:
     show lastcgbg:
         ease 3.0 yalign 0.0
     E "In those moments, I will know that Cygnus and their love is still here with me."
+    window hide
+    show lastcgbg at Bloom with Dissolve(3.0)
+    pause
+    stop music fadeout 5.0
     scene black with Dissolve(5.0)
     pause
     $ persistent.gameisfinished = True
